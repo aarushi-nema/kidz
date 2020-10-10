@@ -1,16 +1,18 @@
 package application.kidz.servlet;
 
+import application.kidz.defined.helper.WordFamilyHelper;
+import application.kidz.defined.resource.WordFamily;
 import application.kidz.servlet.base.AmrSingleColumnDBApplicationServlet;
 import application.kidz.servlet.base.AmrTwoColumnDBApplicationServlet;
 import application.kidz.servlet.base.menu.AmrImageCardView;
 import application.kidz.servlet.menu.SuperAdminSetupLeftMenuView;
-import com.lowagie.text.Table;
+import platform.resource.BaseResource;
 import platform.resource.user;
 import platform.webservice.ui.UIServletContext;
 import platform.webservice.ui.html.*;
 
 
-public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
+public class WordFamilyServlet extends AmrSingleColumnDBApplicationServlet {
 	/**
 	 * 
 	 */
@@ -36,27 +38,44 @@ public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
 		Div div = new Div();
 		div.addAttribute("align","center");
 		TABLE table = new TABLE("","default_table");
+		BaseResource[] resources = WordFamilyHelper.getInstance().getAll(new String[]{"name"});
 		TR tr = new TR();
+		int index = 0;
+		for(BaseResource r : resources) {
+			WordFamily family = (WordFamily) r;
+			TD td = new TD();
+			td.addAttribute("align","center");
+			A a = new A();
+			a.addStyle("font-size","72px");
+			a.setHref("/word_family_word?family="+family.getId());
+			a.setText(family.getName());
+			td.addChild(a);
+			tr.addChild(td);
+			index++;
+			if (index == 4) {
+				index = 0;
+				table.addChild(tr);
+				tr = new TR();
+			}
+		}
+		if (index > 0) {
+			table.addChild(tr);
+		}
 
-		TD td = new TD();
-		H2 h2 = new H2("");
-		A a = new A();
-		a.setHref("/word_family");
-		a.setText("Word Families");
-		h2.addChild(a);
-		td.addChild(h2);
-		tr.addChild(td);
-
-		td = new TD();
-		h2 = new H2("");
-		a = new A();
-		a.setText("Sight Words");
-		h2.addChild(a);
-		td.addChild(h2);
-		tr.addChild(td);
-
-		table.addChild(tr);
 		div.addChild(table);
+
+		div.addChild(new BR());
+		div.addChild(new BR());
+		div.addChild(new BR());
+		div.addChild(new BR());
+
+		A a = new A();
+		a.addStyle("font-size","24px");
+		a.setHref("/");
+		a.setText("Go Back");
+		div.addChild(a);
+
+
 		return div;
 
 	}
