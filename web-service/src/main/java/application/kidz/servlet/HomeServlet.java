@@ -39,6 +39,7 @@ public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
 		TR tr = new TR();
 
 		TD td = new TD();
+		td.addStyle("text-align","center");
 		H2 h2 = new H2("");
 		A a = new A();
 		a.setHref("/word_family");
@@ -48,8 +49,10 @@ public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
 		tr.addChild(td);
 
 		td = new TD();
+		td.addStyle("text-align","center");
 		h2 = new H2("");
 		a = new A();
+		a.setHref("/sight_word_category_type");
 		a.setText("Sight Words");
 		h2.addChild(a);
 		td.addChild(h2);

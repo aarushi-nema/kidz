@@ -1,9 +1,7 @@
 package application.kidz;
 
-import application.kidz.defined.helper.WordFamilyHelper;
-import application.kidz.defined.helper.WordFamilyWordHelper;
-import application.kidz.defined.resource.WordFamily;
-import application.kidz.defined.resource.WordFamilyWord;
+import application.kidz.defined.helper.*;
+import application.kidz.defined.resource.*;
 import application.kidz.servlet.Layout;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +9,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import platform.manager.GlobalDataManager;
 import platform.webservice.manager.BoltViewManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @SpringBootApplication()
@@ -39,6 +40,123 @@ public class Application  {
     }
     public static void loadData() {
         loadWordFamily();
+        loadsightword();
+    }
+    public static void loadsightword() {
+
+        SightWord word = new SightWord("i");
+        word.setName("I");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("a");
+        word.setName("a");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("an");
+        word.setName("an");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("am");
+        word.setName("am");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("read");
+        word.setName("read");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("walk");
+        word.setName("walk");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("talk");
+        word.setName("talk");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("run");
+        word.setName("run");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("speak");
+        word.setName("speak");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("are");
+        word.setName("are");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("was");
+        word.setName("was");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        List<String> list;
+        SightWordCategoryType  type = new SightWordCategoryType("various_category");
+        type.setName("Various Category");
+        SightWordCategoryTypeHelper.getInstance().AddOrUpdateNoCache(type);
+
+        SightWordCategory category = new SightWordCategory("various_category_action");
+        category.setName("action");
+        category.setType("various_category");
+        list = new ArrayList<>();
+        list.add("read");
+        list.add("walk");
+        list.add("talk");
+        list.add("run");
+        list.add("speak");
+        category.setWords(list);
+        SightWordCategoryHelper.getInstance().AddOrUpdateNoCache(category);
+
+
+        type = new SightWordCategoryType("day_wise");
+        type.setName("Day wise");
+        SightWordCategoryTypeHelper.getInstance().AddOrUpdateNoCache(type);
+
+        category = new SightWordCategory("day_wise_day_001");
+        category.setName("Day 001");
+        category.setType("day_wise");
+        SightWordCategoryHelper.getInstance().AddOrUpdateNoCache(category);
+
+        category = new SightWordCategory("day_wise_day_002");
+        category.setName("Day 003");
+        category.setType("day_wise");
+        SightWordCategoryHelper.getInstance().AddOrUpdateNoCache(category);
+
+        category = new SightWordCategory("day_wise_day_004");
+        category.setName("Day 004");
+        category.setType("day_wise");
+        SightWordCategoryHelper.getInstance().AddOrUpdateNoCache(category);
+
+        type = new SightWordCategoryType("number_of_character");
+        type.setName("Number of Character");
+        SightWordCategoryTypeHelper.getInstance().AddOrUpdateNoCache(type);
+
+        category = new SightWordCategory("number_of_character_1");
+        category.setName("Character 01");
+        category.setType("number_of_character");
+        list = new ArrayList<>();
+        list.add("a");
+        list.add("i");
+        category.setWords(list);
+        SightWordCategoryHelper.getInstance().AddOrUpdateNoCache(category);
+
+        category = new SightWordCategory("number_of_character_2");
+        category.setName("Character 02");
+        category.setType("number_of_character");
+        list = new ArrayList<>();
+        list.add("am");
+        list.add("an");
+        category.setWords(list);
+        SightWordCategoryHelper.getInstance().AddOrUpdateNoCache(category);
+
+        category = new SightWordCategory("number_of_character_3");
+        category.setName("Character 03");
+        list = new ArrayList<>();
+        list.add("are");
+        list.add("was");
+        category.setWords(list);
+        category.setType("number_of_character");
+        SightWordCategoryHelper.getInstance().AddOrUpdateNoCache(category);
+
+
     }
     public static void loadWordFamily() {
         WordFamily family = new WordFamily("an");

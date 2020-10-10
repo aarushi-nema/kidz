@@ -35,6 +35,7 @@ public class SightWordCategory extends BaseResource {
 	private String g_status = null;
 	private String name = null;
 	private String type = null;
+	private List<String> words = null;
 	private Long creation_time = null;
 	private Map<String, Object> extra_data = null;
 
@@ -49,6 +50,7 @@ public class SightWordCategory extends BaseResource {
 	public static String FIELD_G_STATUS = "g_status";
 	public static String FIELD_NAME = "name";
 	public static String FIELD_TYPE = "type";
+	public static String FIELD_WORDS = "words";
 	public static String FIELD_CREATION_TIME = "creation_time";
 	public static String FIELD_EXTRA_DATA = "extra_data";
 
@@ -102,6 +104,10 @@ public class SightWordCategory extends BaseResource {
 		typeField.setLength(128);
 		metaData.addField(typeField);
 
+		Field wordsField = new Field("words", "Array");
+		wordsField.setValueType("String");
+		metaData.addField(wordsField);
+
 		Field creation_timeField = new Field("creation_time", "timestamp");
 		metaData.addField(creation_timeField);
 
@@ -130,6 +136,7 @@ public class SightWordCategory extends BaseResource {
 		this.g_status = obj.g_status;
 		this.name = obj.name;
 		this.type = obj.type;
+		this.words = obj.words;
 		this.creation_time = obj.creation_time;
 		this.extra_data = obj.extra_data;
 	}
@@ -166,6 +173,8 @@ public class SightWordCategory extends BaseResource {
 			map.put("name", name);
 		if(type != null)
 			map.put("type", type);
+		if(words != null)
+			map.put("words", words);
 		if(creation_time != null)
 			map.put("creation_time", creation_time);
 		if(extra_data != null)
@@ -196,6 +205,8 @@ public class SightWordCategory extends BaseResource {
 			map.put("name", name);
 		if(type != null)
 			map.put("type", type);
+		if(words != null)
+			map.put("words", words);
 		if(creation_time != null)
 			map.put("creation_time", creation_time);
 		if(extra_data != null)
@@ -220,6 +231,7 @@ public class SightWordCategory extends BaseResource {
 		g_status = (String) map.get("g_status");
 		name = (String) map.get("name");
 		type = (String) map.get("type");
+		words = (List<String>) map.get("words");
 		creation_time = (map.get("creation_time") == null ? null : ((Number) map.get("creation_time")).longValue());
 		extra_data = (Map<String, Object>) map.get("extra_data");
 	}
@@ -270,6 +282,7 @@ public class SightWordCategory extends BaseResource {
 		if(typeObj != null)
 			type = typeObj.toString();
 
+		words = (List<String>) map.get("words");
 		Object creation_timeObj = map.get("creation_time");
 		if(creation_timeObj != null)
 			creation_time = new Long(creation_timeObj.toString());
@@ -463,6 +476,25 @@ public class SightWordCategory extends BaseResource {
 
 	public void unSetType() {
 		this.type = null;
+	}
+
+	public List<String> getWords() {
+		return words;
+	}
+
+
+	public void setWords(List<String> words) {
+		this.words = words;
+	}
+
+	public void addWords(String value) {
+		if(words == null)
+			words = new ArrayList<String>();
+		words.add(value);
+	}
+
+	public void unSetWords() {
+		this.words = null;
 	}
 
 	public Long getCreation_time() {
