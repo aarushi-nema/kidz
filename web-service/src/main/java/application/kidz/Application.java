@@ -136,7 +136,7 @@ public class Application  {
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
 
         family = new WordFamily("eg");
-        family.setName("en");
+        family.setName("eg");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
 
         family = new WordFamily("it");
@@ -165,6 +165,18 @@ public class Application  {
 
         family = new WordFamily("ob");
         family.setName("ob");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        family = new WordFamily("ut");
+        family.setName("ut");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        family = new WordFamily("ug");
+        family.setName("ug");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        family = new WordFamily("un");
+        family.setName("un");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
 
 
