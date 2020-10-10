@@ -144,11 +144,27 @@ public class Application  {
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
 
         family = new WordFamily("if");
-        family.setName("it");
+        family.setName("if");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
 
         family = new WordFamily("in");
         family.setName("in");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        family = new WordFamily("ot");
+        family.setName("ot");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        family = new WordFamily("ox");
+        family.setName("ox");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        family = new WordFamily("og");
+        family.setName("og");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        family = new WordFamily("ob");
+        family.setName("ob");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
 
 
