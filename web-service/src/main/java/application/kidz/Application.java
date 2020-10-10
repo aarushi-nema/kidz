@@ -37,8 +37,10 @@ public class Application  {
     public static void registerdecorators() {
 
     }
-
     public static void loadData() {
+        loadWordFamily();
+    }
+    public static void loadWordFamily() {
         WordFamily family = new WordFamily("an");
         family.setName("an");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
@@ -124,6 +126,16 @@ public class Application  {
         word.setName("jam");
         word.setFamily("am");
         WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        family = new WordFamily("et");
+        family.setName("et");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        family = new WordFamily("en");
+        family.setName("en");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+
     }
 
     public static void main(String[] args) {
