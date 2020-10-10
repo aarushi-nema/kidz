@@ -48,6 +48,7 @@ public class AmrHeaderView extends BaseView {
             navbar_header.addChild(menu_a);
         }
         A a = new A();
+        a.setHref("/");
         a.setText("KIDZ");
         a.addAttribute("class", "navbar-brand");
         a.addAttribute("style", "padding-top:2px");
