@@ -16,7 +16,11 @@ public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
-		
+
+	protected boolean isLoginRequired() {
+		return false;
+	}
+
 	@Override
 	public BaseHTMLComponent getAddView(UIServletContext context) {
 		// TODO Auto-generated method stub

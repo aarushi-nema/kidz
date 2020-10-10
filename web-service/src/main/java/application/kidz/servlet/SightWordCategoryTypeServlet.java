@@ -15,7 +15,9 @@ public class SightWordCategoryTypeServlet extends AmrSingleColumnDBApplicationSe
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	protected boolean isLoginRequired() {
+		return false;
+	}
 		
 	@Override
 	public BaseHTMLComponent getAddView(UIServletContext context) {
