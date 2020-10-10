@@ -670,21 +670,175 @@ public class Application  {
         word.setFamily("ox");
         WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
 
+        family = new WordFamily("od");
+        family.setName("od");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("od-cod");
+        word.setName("cod");
+        word.setFamily("od");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("od-god");
+        word.setName("god");
+        word.setFamily("od");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("od-nod");
+        word.setName("nod");
+        word.setFamily("od");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("od-pod");
+        word.setName("pod");
+        word.setFamily("od");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("od-rod");
+        word.setName("rod");
+        word.setFamily("od");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
 
         family = new WordFamily("ut");
         family.setName("ut");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
 
+        word = new WordFamilyWord("ut-cut");
+        word.setName("cut");
+        word.setFamily("ut");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ut-hut");
+        word.setName("hut");
+        word.setFamily("ut");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ut-nut");
+        word.setName("nut");
+        word.setFamily("ut");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ut-but");
+        word.setName("but");
+        word.setFamily("ut");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        family = new WordFamily("ub");
+        family.setName("ub");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("ub-cub");
+        word.setName("cub");
+        word.setFamily("ub");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ub-cub");
+        word.setName("cub");
+        word.setFamily("ub");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ub-tub");
+        word.setName("tub");
+        word.setFamily("ub");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ub-rub");
+        word.setName("rub");
+        word.setFamily("ub");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ub-hub");
+        word.setName("hub");
+        word.setFamily("ub");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+
         family = new WordFamily("ug");
         family.setName("ug");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("ug-bug");
+        word.setName("bug");
+        word.setFamily("ug");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ug-jug");
+        word.setName("jug");
+        word.setFamily("ug");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ug-mug");
+        word.setName("mug");
+        word.setFamily("ug");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ug-hug");
+        word.setName("hug");
+        word.setFamily("ug");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ug-hug");
+        word.setName("hug");
+        word.setFamily("ug");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
 
         family = new WordFamily("un");
         family.setName("un");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
 
+        word = new WordFamilyWord("ug-bun");
+        word.setName("bun");
+        word.setFamily("un");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
 
+        word = new WordFamilyWord("ug-fun");
+        word.setName("fun");
+        word.setFamily("un");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
 
+        word = new WordFamilyWord("ug-gun");
+        word.setName("gun");
+        word.setFamily("un");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ug-run");
+        word.setName("run");
+        word.setFamily("un");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ug-sun");
+        word.setName("sun");
+        word.setFamily("un");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        family = new WordFamily("up");
+        family.setName("up");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("up-cup");
+        word.setName("cup");
+        word.setFamily("up");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("up-up");
+        word.setName("up");
+        word.setFamily("up");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        family = new WordFamily("us");
+        family.setName("us");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("up-bus");
+        word.setName("bus");
+        word.setFamily("us");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("up-us");
+        word.setName("us");
+        word.setFamily("us");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
     }
 
     public static void main(String[] args) {
