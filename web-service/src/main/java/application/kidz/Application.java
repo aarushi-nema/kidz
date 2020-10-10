@@ -10,7 +10,7 @@ import platform.webservice.manager.BoltViewManager;
 
 
 @SpringBootApplication()
-@ComponentScan(basePackages = {"controller","platform.webservice.map","platform.webservice.controller.base"})
+@ComponentScan(basePackages = {"application.kidz.controller"})
 public class Application  {
     static public void populate_default_database() {
         Thread  thread = new Thread(new Runnable() {

@@ -1,4 +1,4 @@
-package controller;
+package application.kidz.controller;
 
 /**
  * Created by ajay on 23/12/19.

@@ -48,24 +48,7 @@ public class AmrHeaderView extends BaseView {
             navbar_header.addChild(menu_a);
         }
         A a = new A();
-        IMG img = new IMG();
-        if ((mContext.getDomainName() != null) && (mContext.getDomainName().contains("trinity"))) {
-            img.addAttribute("style", "height:50px");
-            img.setSRC("/images/trinity.gif");
-        } else if ((mContext.getDomainName() != null) && (mContext.getDomainName().contains("aew"))) {
-            img.addAttribute("style", "height:35px");
-            img.setSRC("/images/aew_logo.png");
-        } else if ((mContext.getDomainName() != null) && (mContext.getDomainName().contains("itl"))) {
-            img.addAttribute("style", "height:40px");
-            img.setSRC("/images/itl_header_logo.png");
-        } else if ((mContext.getDomainName() != null) && (mContext.getDomainName().contains("hpl"))) {
-            img.addAttribute("style", "height:40px");
-            img.setSRC("/images/hpl_logo.png");
-        } else {
-            img.addAttribute("style", "height:35px");
-            img.setSRC("assets/images/logo_light.png");
-        }
-        a.addChild(img);
+        a.setText("KIDZ");
         a.addAttribute("class", "navbar-brand");
         a.addAttribute("style", "padding-top:2px");
         navbar_header.addChild(a);
@@ -74,59 +57,6 @@ public class AmrHeaderView extends BaseView {
         UL ul = new UL(null, "nav navbar-nav navbar-right text-right");
         navbarDiv.addChild(ul);
         LI li ;
-        if (mContext.getUser() != null && !Util.isEmpty(mContext.getUser().getCustomer_group_id())) {
-            BaseResource[] customers = CustomerHelper.getInstance().getByExpression(new Expression(customer.FIELD_CUSTOMER_GROUP_ID, REL_OP.EQ,mContext.getUser().getCustomer_group_id()),
-                    new String[]{"name"});
-            if (!Util.isEmpty(customers)) {
-                li = new LI();
-                ArrayList<IdValue> list = new ArrayList<>();
-                for(BaseResource resource : customers) {
-                    list.add(new IdValue(resource.getId(), resource.getName()));
-                }
-                li = new LI();
-                a = new A();
-                a.setText("Select Project : ");
-                a.setHref("javascript(0)");
-                li.addChild(a);
-                ul.addChild(li);
-
-                li = new LI();
-                COMBO combo = new COMBO("select_project", "form-control", list, mContext.getCustomerId());
-                combo.getView().addAttribute("style", "margin-right:200px;margin-top:5px;");
-                combo.getView().addAttribute("onchange", "ActionHandler.callChangeProject()");
-                li.addChild(combo.getView());
-                ul.addChild(li);
-            }
-        }
-        li = new LI();
-        a = new A();
-        a.setText("Dashboard");
-        a.setHref("/ui/dashboard");
-        li.addChild(a);
-        ul.addChild(li);
-
-        li = new LI();
-
-        a = new A();
-        a.setText("Activity");
-        a.setHref("/ui/activity");
-        li.addChild(a);
-        ul.addChild(li);
-
-        li = new LI();
-        a = new A();
-        a.setText("Analytics");
-        a.setHref("/ui/analysis");
-        li.addChild(a);
-        ul.addChild(li);
-
-        li = new LI();
-        a = new A();
-        a.setText("Setup");
-        a.setHref("/ui/setup");
-        li.addChild(a);
-        ul.addChild(li);
-
         li = new LI(null, "ropdown dropdown-user");
 
 
