@@ -451,9 +451,108 @@ public class Application  {
         word.setFamily("id");
         WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
 
+        family = new WordFamily("ip");
+        family.setName("ip");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("ip-dip");
+        word.setName("dip");
+        word.setFamily("ip");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ip-lip");
+        word.setName("lip");
+        word.setFamily("ip");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ip-hip");
+        word.setName("hip");
+        word.setFamily("ip");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ip-tip");
+        word.setName("tip");
+        word.setFamily("ip");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ip-sip");
+        word.setName("sip");
+        word.setFamily("ip");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+
+        family = new WordFamily("ib");
+        family.setName("ib");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("ib-bib");
+        word.setName("dib");
+        word.setFamily("ib");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ib-rib");
+        word.setName("rib");
+        word.setFamily("ib");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ib-nib");
+        word.setName("nib");
+        word.setFamily("ib");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+
+        family = new WordFamily("ix");
+        family.setName("ix");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("ix-six");
+        word.setName("six");
+        word.setFamily("ix");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ix-fix");
+        word.setName("fix");
+        word.setFamily("ix");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
         family = new WordFamily("ot");
         family.setName("ot");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("ot-cot");
+        word.setName("cot");
+        word.setFamily("ot");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ot-hot");
+        word.setName("hot");
+        word.setFamily("ot");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ot-dot");
+        word.setName("dot");
+        word.setFamily("ot");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ot-pot");
+        word.setName("pot");
+        word.setFamily("ot");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ot-rot");
+        word.setName("rot");
+        word.setFamily("ot");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ot-got");
+        word.setName("got");
+        word.setFamily("ot");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ot-not");
+        word.setName("not");
+        word.setFamily("ot");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
 
         family = new WordFamily("ox");
         family.setName("ox");
@@ -463,9 +562,114 @@ public class Application  {
         family.setName("og");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
 
+        word = new WordFamilyWord("og-dog");
+        word.setName("dog");
+        word.setFamily("og");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("og-fog");
+        word.setName("fog");
+        word.setFamily("og");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("og-jog");
+        word.setName("jog");
+        word.setFamily("og");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("og-log");
+        word.setName("log");
+        word.setFamily("og");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+
         family = new WordFamily("ob");
         family.setName("ob");
         WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("ob-cob");
+        word.setName("cob");
+        word.setFamily("ob");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ob-job");
+        word.setName("job");
+        word.setFamily("ob");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ob-mob");
+        word.setName("mob");
+        word.setFamily("ob");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ob-rob");
+        word.setName("rob");
+        word.setFamily("ob");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ob-sob");
+        word.setName("sob");
+        word.setFamily("ob");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ob-nob");
+        word.setName("nob");
+        word.setFamily("ob");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        family = new WordFamily("op");
+        family.setName("op");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("op-mop");
+        word.setName("mop");
+        word.setFamily("op");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("op-top");
+        word.setName("top");
+        word.setFamily("op");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("op-cop");
+        word.setName("cop");
+        word.setFamily("op");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("op-pop");
+        word.setName("pop");
+        word.setFamily("op");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("op-hop");
+        word.setName("hop");
+        word.setFamily("op");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        family = new WordFamily("ox");
+        family.setName("ox");
+        WordFamilyHelper.getInstance().AddOrUpdateNoCache(family);
+
+        word = new WordFamilyWord("ox-ox");
+        word.setName("ox");
+        word.setFamily("ox");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ox-box");
+        word.setName("box");
+        word.setFamily("ox");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ox-fox");
+        word.setName("fox");
+        word.setFamily("ox");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new WordFamilyWord("ox-pox");
+        word.setName("pox");
+        word.setFamily("ox");
+        WordFamilyWordHelper.getInstance().AddOrUpdateNoCache(word);
+
 
         family = new WordFamily("ut");
         family.setName("ut");
