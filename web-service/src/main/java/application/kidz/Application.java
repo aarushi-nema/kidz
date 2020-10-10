@@ -88,6 +88,342 @@ public class Application  {
         word.setName("was");
         SightWordHelper.getInstance().AddOrUpdateNoCache(word);
 
+        word = new SightWord("no");
+        word.setName("no");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("his");
+        word.setName("his");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("him");
+        word.setName("him");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("will");
+        word.setName("will");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("all");
+        word.setName("all");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("not");
+        word.setName("not");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("one");
+        word.setName("one");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("two");
+        word.setName("two");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("after");
+        word.setName("after");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("make");
+        word.setName("make");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("was");
+        word.setName("was");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("get");
+        word.setName("get");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("out");
+        word.setName("out");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("about");
+        word.setName("about");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("other");
+        word.setName("other");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("would");
+        word.setName("would");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("who");
+        word.setName("who");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("write");
+        word.setName("write");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("from");
+        word.setName("from");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("what");
+        word.setName("what");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("find");
+        word.setName("find");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("many");
+        word.setName("many");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("old");
+        word.setName("old");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("first");
+        word.setName("first");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("these");
+        word.setName("these");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("use");
+        word.setName("use");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("your");
+        word.setName("your");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("as");
+        word.setName("as");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("call");
+        word.setName("call");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("more");
+        word.setName("more");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("some");
+        word.setName("some");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("again");
+        word.setName("again");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("long");
+        word.setName("long");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("when");
+        word.setName("when");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("why");
+        word.setName("why");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("like");
+        word.setName("like");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("my");
+        word.setName("my");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("see");
+        word.setName("see");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("can");
+        word.setName("can");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("the");
+        word.setName("the");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("go");
+        word.setName("go");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("to");
+        word.setName("to");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("we");
+        word.setName("we");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("you");
+        word.setName("you");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("look");
+        word.setName("look");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("at");
+        word.setName("at");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("big");
+        word.setName("big");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("is");
+        word.setName("is");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("with");
+        word.setName("with");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("he");
+        word.setName("he");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("for");
+        word.setName("for");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("little");
+        word.setName("little");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("have");
+        word.setName("have");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("here");
+        word.setName("here");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("are");
+        word.setName("are");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("and");
+        word.setName("and");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("play");
+        word.setName("play");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("said");
+        word.setName("said");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("put");
+        word.setName("put");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("they");
+        word.setName("they");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("this");
+        word.setName("this");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("help");
+        word.setName("help");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("in");
+        word.setName("in");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("me");
+        word.setName("me");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("on");
+        word.setName("on");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("up");
+        word.setName("up");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("down");
+        word.setName("down");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("away");
+        word.setName("away");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("jump");
+        word.setName("jump");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("of");
+        word.setName("of");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("where");
+        word.setName("where");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("do");
+        word.setName("do");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("it");
+        word.setName("it");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("be");
+        word.setName("be");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("went");
+        word.setName("went");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("or");
+        word.setName("or");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("had");
+        word.setName("had");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("has");
+        word.setName("has");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("have");
+        word.setName("have");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("how");
+        word.setName("how");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("now");
+        word.setName("now");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("so");
+        word.setName("so");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("into");
+        word.setName("into");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new SightWord("very");
+        word.setName("very");
+        SightWordHelper.getInstance().AddOrUpdateNoCache(word);
+
         List<String> list;
         SightWordCategoryType  type = new SightWordCategoryType("various_category");
         type.setName("Various Category");
@@ -105,6 +441,11 @@ public class Application  {
         category.setWords(list);
         SightWordCategoryHelper.getInstance().AddOrUpdateNoCache(category);
 
+
+        category = new SightWordCategory("all");
+        category.setName("all");
+        category.setType("various_category");
+        SightWordCategoryHelper.getInstance().AddOrUpdateNoCache(category);
 
         type = new SightWordCategoryType("day_wise");
         type.setName("Day wise");

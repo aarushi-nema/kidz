@@ -42,8 +42,13 @@ public class SightWordServlet extends AmrSingleColumnDBApplicationServlet {
 		div.addAttribute("align","center");
 		TABLE table = new TABLE("","default_table");
 		SightWordCategory category = (SightWordCategory)SightWordCategoryHelper.getInstance().getById(_category);
-		Expression e = new Expression(SightWordCategory.FIELD_ID, REL_OP.IN,category.getWords());
-		BaseResource[] resources = SightWordHelper.getInstance().getByExpression(e, new String[]{"name"});
+		BaseResource[] resources;
+		if ("all".equalsIgnoreCase(_category)) {
+			resources = SightWordHelper.getInstance().getAll(new String[]{"name"});
+		} else {
+			Expression e = new Expression(SightWordCategory.FIELD_ID, REL_OP.IN, category.getWords());
+			 resources = SightWordHelper.getInstance().getByExpression(e, new String[]{"name"});
+		}
 		TR tr = new TR();
 		int index = 0;
 		for(BaseResource r : resources) {
