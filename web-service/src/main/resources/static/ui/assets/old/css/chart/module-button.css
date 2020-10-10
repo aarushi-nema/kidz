@@ -1,0 +1,574 @@
+/* buttons */
+.solid-graphs button {
+  outline: none !important;
+}
+.solid-graphs a.btn {
+  color: white;
+}
+.solid-graphs .btn {
+  text-transform: uppercase;
+  position: relative;
+  padding: 0 1.3625em;
+  line-height: 2.5;
+  font-size: 0.75em;
+  color: rgba(255, 255, 255, 0.86);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 400;
+  border-color: transparent;
+  font-size: 14px;
+}
+.solid-graphs .btn.btn-border {
+  border: 2px solid #444 !important;
+  background: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
+  color: #444;
+}
+.solid-graphs .btn.btn-border:hover {
+  color: white !important;
+}
+.solid-graphs .btn:hover {
+  cursor: pointer;
+}
+.solid-graphs .btn .fa {
+  margin-right: 0.25em;
+}
+.solid-graphs .btn-x-big {
+  font-size: 1.25em;
+}
+.solid-graphs .btn-big {
+  font-size: 1em;
+}
+.solid-graphs .btn-small {
+  font-size: 0.6em;
+}
+.solid-graphs .btn-x-small {
+  font-size: 0.5em;
+}
+.solid-graphs .btn-default {
+  background: #03a9f4;
+  -webkit-box-shadow: 0 4px 0 0 #0286c2;
+     -moz-box-shadow: 0 4px 0 0 #0286c2;
+          box-shadow: 0 4px 0 0 #0286c2;
+}
+.solid-graphs .btn-default:hover {
+  background: #039fe5;
+}
+.solid-graphs .btn-muted {
+  background: #868686;
+  -webkit-box-shadow: 0 4px 0 0 #6d6d6d;
+     -moz-box-shadow: 0 4px 0 0 #6d6d6d;
+          box-shadow: 0 4px 0 0 #6d6d6d;
+}
+.solid-graphs .btn-muted:hover {
+  background: #7e7e7e;
+}
+.solid-graphs .btn-alternate {
+  background: #06b2a2;
+  -webkit-box-shadow: 0 4px 0 0 #048175;
+     -moz-box-shadow: 0 4px 0 0 #048175;
+          box-shadow: 0 4px 0 0 #048175;
+}
+.solid-graphs .btn-alternate:hover {
+  background: #06a395;
+}
+.solid-graphs .btn-success {
+  background: #14bb46;
+  -webkit-box-shadow: 0 4px 0 0 #0f8d35;
+     -moz-box-shadow: 0 4px 0 0 #0f8d35;
+          box-shadow: 0 4px 0 0 #0f8d35;
+}
+.solid-graphs .btn-success:hover {
+  background: #13ad41;
+}
+.solid-graphs .btn-info {
+  background: #0583bb;
+  -webkit-box-shadow: 0 4px 0 0 #046089;
+     -moz-box-shadow: 0 4px 0 0 #046089;
+          box-shadow: 0 4px 0 0 #046089;
+}
+.solid-graphs .btn-info:hover {
+  background: #0579ac;
+}
+.solid-graphs .btn-danger {
+  background: #ea0000;
+  -webkit-box-shadow: 0 4px 0 0 #b70000;
+     -moz-box-shadow: 0 4px 0 0 #b70000;
+          box-shadow: 0 4px 0 0 #b70000;
+}
+.solid-graphs .btn-danger:hover {
+  background: #db0000;
+}
+.solid-graphs .btn-caution {
+  background: #e48609;
+  -webkit-box-shadow: 0 4px 0 0 #b36907;
+     -moz-box-shadow: 0 4px 0 0 #b36907;
+          box-shadow: 0 4px 0 0 #b36907;
+}
+.solid-graphs .btn-caution:hover {
+  background: #d57d08;
+}
+.solid-graphs .btn-warning {
+  background: #ec4848;
+  -webkit-box-shadow: 0 4px 0 0 #e71a1a;
+     -moz-box-shadow: 0 4px 0 0 #e71a1a;
+          box-shadow: 0 4px 0 0 #e71a1a;
+}
+.solid-graphs .btn-warning:hover {
+  background: #eb3a3a;
+}
+.solid-graphs .btn-flat {
+  -webkit-box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
+}
+.solid-graphs .btn-mina {
+  overflow: hidden !important;
+  padding-left: 1.3625em !important;
+  padding-right: 1.3625em !important;
+  /* slides */
+  /* reveal icon */
+}
+.solid-graphs .btn-mina.btn-mina-st > span {
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-st:before {
+  position: absolute;
+  display: block;
+  content: attr(data-c);
+  top: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-st:hover > span {
+  -webkit-transform: translateY(-100%);
+     -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+       -o-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-st:hover:before {
+  top: 0;
+}
+.solid-graphs .btn-mina.btn-mina-sb > span {
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-sb:before {
+  position: absolute;
+  display: block;
+  content: attr(data-c);
+  bottom: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-sb:hover > span {
+  -webkit-transform: translateY(100%);
+     -moz-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+       -o-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-sb:hover:before {
+  bottom: 0;
+}
+.solid-graphs .btn-mina.btn-mina-sr > span {
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-sr:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  content: attr(data-c);
+  -webkit-transform: translateX(-1000%);
+     -moz-transform: translateX(-1000%);
+      -ms-transform: translateX(-1000%);
+       -o-transform: translateX(-1000%);
+          transform: translateX(-1000%);
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-sr:hover > span {
+  -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+       -o-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-sr:hover:before {
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+}
+.solid-graphs .btn-mina.btn-mina-sl > span {
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-sl:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  content: attr(data-c);
+  -webkit-transform: translateX(1000%);
+     -moz-transform: translateX(1000%);
+      -ms-transform: translateX(1000%);
+       -o-transform: translateX(1000%);
+          transform: translateX(1000%);
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-sl:hover > span {
+  -webkit-transform: translateX(-100%);
+     -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+       -o-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-sl:hover:before {
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+}
+.solid-graphs .btn-mina.btn-mina-rip-m:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 40%;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  margin: auto;
+  -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+      -ms-transform: scale(0);
+       -o-transform: scale(0);
+          transform: scale(0);
+}
+.solid-graphs .btn-mina.btn-mina-rip-m:hover:before {
+  -webkit-transition: all 0.5s ease-in;
+     -moz-transition: all 0.5s ease-in;
+       -o-transition: all 0.5s ease-in;
+          transition: all 0.5s ease-in;
+  -webkit-transform: scale(10);
+     -moz-transform: scale(10);
+      -ms-transform: scale(10);
+       -o-transform: scale(10);
+          transform: scale(10);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-rip-tl:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+      -ms-transform: scale(0);
+       -o-transform: scale(0);
+          transform: scale(0);
+}
+.solid-graphs .btn-mina.btn-mina-rip-tl:hover:before {
+  -webkit-transition: all 0.5s ease-in;
+     -moz-transition: all 0.5s ease-in;
+       -o-transition: all 0.5s ease-in;
+          transition: all 0.5s ease-in;
+  -webkit-transform: scale(20);
+     -moz-transform: scale(20);
+      -ms-transform: scale(20);
+       -o-transform: scale(20);
+          transform: scale(20);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-rip-tr:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+      -ms-transform: scale(0);
+       -o-transform: scale(0);
+          transform: scale(0);
+}
+.solid-graphs .btn-mina.btn-mina-rip-tr:hover:before {
+  -webkit-transition: all 0.5s ease-in;
+     -moz-transition: all 0.5s ease-in;
+       -o-transition: all 0.5s ease-in;
+          transition: all 0.5s ease-in;
+  -webkit-transform: scale(20);
+     -moz-transform: scale(20);
+      -ms-transform: scale(20);
+       -o-transform: scale(20);
+          transform: scale(20);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-rip-bl:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+      -ms-transform: scale(0);
+       -o-transform: scale(0);
+          transform: scale(0);
+}
+.solid-graphs .btn-mina.btn-mina-rip-bl:hover:before {
+  -webkit-transition: all 0.5s ease-in;
+     -moz-transition: all 0.5s ease-in;
+       -o-transition: all 0.5s ease-in;
+          transition: all 0.5s ease-in;
+  -webkit-transform: scale(20);
+     -moz-transform: scale(20);
+      -ms-transform: scale(20);
+       -o-transform: scale(20);
+          transform: scale(20);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-rip-br:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  right: 0;
+  -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+      -ms-transform: scale(0);
+       -o-transform: scale(0);
+          transform: scale(0);
+}
+.solid-graphs .btn-mina.btn-mina-rip-br:hover:before {
+  -webkit-transition: all 0.5s ease-in;
+     -moz-transition: all 0.5s ease-in;
+       -o-transition: all 0.5s ease-in;
+          transition: all 0.5s ease-in;
+  -webkit-transform: scale(20);
+     -moz-transform: scale(20);
+      -ms-transform: scale(20);
+       -o-transform: scale(20);
+          transform: scale(20);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-rev-b > span {
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-rev-b:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  content: attr(data-icon);
+  font-family: 'FontAwesome';
+  text-align: center;
+  top: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-rev-b:hover > span {
+  -webkit-transform: translateY(-100%);
+     -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+       -o-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-rev-b:hover:before {
+  top: 0;
+}
+.solid-graphs .btn-mina.btn-mina-rev-t > span {
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-rev-t:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  content: attr(data-icon);
+  font-family: 'FontAwesome';
+  text-align: center;
+  bottom: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-rev-t:hover > span {
+  -webkit-transform: translateY(100%);
+     -moz-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+       -o-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-rev-t:hover:before {
+  bottom: 0%;
+}
+.solid-graphs .btn-mina.btn-mina-rev-l > span {
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-rev-l:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  display: block;
+  content: attr(data-icon);
+  -webkit-transform: translateX(-1000%);
+     -moz-transform: translateX(-1000%);
+      -ms-transform: translateX(-1000%);
+       -o-transform: translateX(-1000%);
+          transform: translateX(-1000%);
+  font-family: 'FontAwesome';
+  text-align: center;
+  bottom: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-rev-l:hover > span {
+  -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+       -o-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-rev-l:hover:before {
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+}
+.solid-graphs .btn-mina.btn-mina-rev-r > span {
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-rev-r:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  display: block;
+  content: attr(data-icon);
+  -webkit-transform: translateX(1000%);
+     -moz-transform: translateX(1000%);
+      -ms-transform: translateX(1000%);
+       -o-transform: translateX(1000%);
+          transform: translateX(1000%);
+  font-family: 'FontAwesome';
+  text-align: center;
+  bottom: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+.solid-graphs .btn-mina.btn-mina-rev-r:hover > span {
+  -webkit-transform: translateX(-100%);
+     -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+       -o-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+}
+.solid-graphs .btn-mina.btn-mina-rev-r:hover:before {
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+}

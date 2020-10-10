@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html style="overflow: hidden;">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>Student Login - !!!brandname!!!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <!-- Bootstrap -->
+      <link href="/ui/css/bootstrap.css" rel="stylesheet">
+      <link href="/ui/css/font-awesome.css" rel="stylesheet">
+      <link href="/ui/css/chosen.css" rel="stylesheet">
+      <link href="/ui/css/animate.css" rel="stylesheet">
+      <link href="/ui/css/bootstrap-checkbox.css" rel="stylesheet">
+      <link href="/ui/css/c2p_customer.css" rel="stylesheet">
+      <script type="text/javascript" src="/ui/js//action_handle.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/form_handler.js">
+	    </script> 
+	    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js">
+	    </script> 
+	    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/function.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/DataHandler.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/json.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/base64.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/bootstrap.min.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/jquery.blockUI.js">
+	    </script> 
+          <script type="text/javascript" src="/ui/js/function.js">
+        </script> 
+        <script type="text/javascript" src="/ui/js/DataHandler.js">
+        </script> 
+        <script type="text/javascript" src="/ui/js/json.js">
+        </script>   
+   </head>
+   <body class="brownish-scheme" style="height:100%;">
+      <div style="display: none;" class="mask">
+         <div style="display: none;" id="loader"></div>
+      </div>
+      <script>
+      function validation() {
+    	  var reason="";
+    	  reason += validateEmpty("school_id","Branch/Centre");
+    	  reason += validateEmpty("name","Name");
+    	  reason += validateEmpty("student_email_id","Email Id");
+    	  reason += validateEmpty("student_mobile_no","Mobile No");
+    	  reason += validateEmpty("batch_id","Batch/Course");
+      	    
+    	  if (reason != "") {
+    	  alert(reason); 
+    	  return false;
+    	  }
+    	  return true;
+    	  }
+      </script>
+      <div class="apps">
+         <div id="wrap">
+            <div class="row">
+               <button class="btn show-code" id="pop" data-toggle="modal" data-target="#modal" style="display:none">
+               how code
+               </button>
+               <div style="padding-left: 265px;" id="content" class="col-md-12 full-page">
+                  <div class="col-sm-8"  id="loginleftimage">
+				    		<img src="!!!rightside!!!" style="width:95%">
+							<span id="customurl" name="customurl" style="display:none">http://drishti.conductexam.com</span>
+			
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="welcome animated bounceIn">
+                        <img src="!!!logo!!!" alt="" class="logo" style="width:80%;max-height: 200px; "><br><br>
+                        <form id="form-signin" class="form-signin">
+                        	 <input class="form-control" id="school_id" name="school_id"  type="hidden" value="!!!institute_id!!!">
+                           <section>
+                              <p>Student Registration</p>
+                              <div id="alert"></div>
+                              <div class="input-group">
+                                 <input class="form-control" id="name" name="name" placeholder="Enter Name" type="text">
+                                 <div class="input-group-addon"></div>
+                              </div>
+                              <div class="input-group">
+                                 <input class="form-control" id="student_mobile_no" name="student_mobile_no" placeholder="Enter Mobile No." type="text">
+                                 <div class="input-group-addon"></div>
+                              </div>
+                              <div class="input-group">
+                                 <input class="form-control" id="student_email_id" name="student_email_id" placeholder="Enter Email Id" type="text">
+                                 <div class="input-group-addon"></div>
+                              </div>
+							  <div class="input-group">
+                                 <input class="form-control" id="address1" name="address1" placeholder="Enter Address" type="text">
+                                 <div class="input-group-addon"></div>
+                              </div>
+								<div class="input-group">
+                                 <input class="form-control" id="city" name="city" placeholder="Enter City" type="text">
+                                <div class="input-group-addon"></div>
+                              </div>
+                              <div class="input-group">
+                                 <select class="form-control" style="background-color: #fafafa;" id="batch_id" name="batch_id">
+                                 !!!options_batch_id!!!
+                                 </select>
+                                <div class="input-group-addon"></div>
+                       
+                              </div>
+                            	
+                           </section>
+                           <section class="controls">
+                              <style>
+                                 .btn.btn-hotpink {background-color: #8F2C3B;color: #f2f2f2;}.btn.btn-hotpink {background-color: #8F2C3B;color: #f2f2f2; }.btn.btn-hotpink:hover {background-color: #8F2C3B;color: white; }
+                              </style>
+                              <a style="color:#428BCA;" href="#" onclick="forgotpassword(this)">&nbsp</a>
+                                 <button type="button" class="btn btn-primary pull-right" id="register" name="register" onclick="FormHandler.call('/c4t/student_registration?action=add','school_id,name,address1,city,student_mobile_no,student_email_id,batch_id','/ui/student_registration_success?institute_id=!!!institute_id!!!','null');" ">Register</button>
+                              <!--<a href="#" style="background-color: red;border-color: red; border-image: none; border-style: solid;border-width: 7px 11px 4px;box-shadow: 0 -2px #bbb inset;color: #333;cursor: pointer;position: relative;text-align: center;vertical-align: top;" class="pull-center" onclick="window.location='Register'">New User Registration</a>-->
+                           </section>
+                           <section class="new-acc">
+                              <input value="Already Register" class="btn btn-hotpink margin-bottom-20" onclick="window.location='!!!login_link!!!'" type="button">
+                           </section>
+                        </form>
+                     </div>                   
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

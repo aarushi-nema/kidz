@@ -1,0 +1,63 @@
+{
+			"resource" : "customer_proxy",
+			"api_from_db" : true,
+			"ui_from_db" : true,
+			"table" : true,
+			"tile" : false,
+			"display_name" : "Customer",
+			"menu_context" : "setup",
+			"page_name" : {
+				"list" : "customer_proxy",
+				"add" : "customer_proxy",
+				"view" : "customer_proxy",
+				"edit" : "customer_proxy"
+			},
+			"base_resource" : "customer",
+			"add_required" : true,
+			"modify_required" : true,
+			"delete_required" : true,
+			"list" : {
+				"fields":[
+					{
+						"heading":"Name",
+						"type":"STRING",
+						"order":1,
+						"sortable":true,
+						"name":"Name"
+					}
+				]
+			},
+			"form" : {
+					"blocks": [
+						{
+							"name":"basic_configuration",
+							"order":1,
+							"fields":[
+								{
+									"label":"Name",
+									"order":1,
+									"type":"STRING",
+									"required":true,
+									"component":"textbox",
+									"name":"Name"
+								},
+								{
+									"label":"Customer Group",
+									"foreign_resource":"customer_group",
+									"order":0,
+									"type":"STRING",
+									"component":"dropdown",
+									"datasource":{
+										"application":"null",
+										"resource":"customer_group",
+										"query_id":"GET_ALL",
+										"key":"id"
+									},
+									"name":"customer_group_id"
+								}
+							],
+							"title":"Configuration"
+						}
+					]
+			}
+}

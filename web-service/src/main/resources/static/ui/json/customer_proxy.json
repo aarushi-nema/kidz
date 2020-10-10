@@ -1,0 +1,64 @@
+{
+  "customer_proxy": {
+    "name": "customer_proxy",
+    "purpose": "RESOURCE",
+    "display_name": "Customer",
+    "cluster": "DB_PROFILE",
+    "ui": true,
+    "api": true,
+    "base_resource": "customer",
+    "api_from_db": true,
+    "ui_from_db": true,
+    "login_required": true,
+    "menu_context": "setup",
+    "add_required": true,
+    "modify_required": true,
+    "delete_required": true,
+    "blocks": {
+      "basic_configuration": {
+        "title": "Configuration",
+        "order": 1
+      }
+    },
+    "fields": {
+      "id": {
+        "length": "128",
+        "type": "String"
+      },
+      "Name": {
+        "length": "128",
+        "type": "String",
+        "block": "basic_configuration",
+        "required": true,
+        "list": {
+          "heading": "Name",
+          "type": "STRING",
+          "sortable": true,
+          "order": 1
+        },
+        "form": {
+          "label": "Name",
+          "component": "textbox",
+          "order": 1
+        }
+      },
+      "customer_group_id": {
+        "length": "128",
+        "type": "String",
+        "block": "basic_configuration",
+        "foreign": {
+          "resource": "customer_group"
+        },
+        "form": {
+          "label": "Customer Group",
+          "component": "dropdown",
+          "order": 0,
+          "datasource": {
+            "resource": "customer_group",
+            "queryId": "GET_ALL"
+          }
+        }
+      }
+    }
+  }
+}

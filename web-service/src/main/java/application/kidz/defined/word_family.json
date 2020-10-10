@@ -1,0 +1,33 @@
+{
+	"word_family" :
+	{
+		"cluster": "DB_PROFILE",
+		"fields":
+		{
+			"id":
+			{
+				"name":"id",
+				"length": 128,
+				"type":"String"
+			},
+			"name":
+			{
+				"length": 128,
+				"type":"String"
+			},
+			"root":
+			{
+				"length": 1,
+				"type":"String"
+			},
+			"parent_id":
+			{
+				"length": 128,
+				"type":"String"
+			},
+			"creation_time": {
+				"type": "timestamp"
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+{
+  "admin": {
+    "name": "admin",
+    "purpose": "RESOURCE",
+    "display_name": "Admin",
+    "cluster": "DB_PROFILE",
+    "ui": true,
+    "api": true,
+    "base_resource": "user",
+    "base_resource_field": "type",
+    "base_resource_value": "CUSTOMER_ADMIN",
+    "api_from_db": true,
+    "ui_from_db": true,
+    "blocks": {
+      "basic_configuration": {
+        "title": "Configuration"
+      }
+    },
+    "fields": {
+      "id": {
+        "length": "128",
+        "type": "String"
+      },
+      "name": {
+        "length": "128",
+        "type": "String",
+        "block": "basic_configuration",
+        "list": {
+          "heading": "Name",
+          "type": "STRING",
+          "order": 1
+        },
+        "form": {
+          "label": "Name",
+          "component": "textbox",
+          "order": 0
+        }
+      },
+      "email_id": {
+        "length": "128",
+        "type": "String",
+        "block": "basic_configuration",
+        "required": true,
+        "list": {
+          "heading": "Email ID",
+          "type": "STRING",
+          "order": 4
+        },
+        "form": {
+          "label": "Email ID",
+          "component": "textbox",
+          "order": 4
+        }
+      },
+      "mobile_no": {
+        "length": "128",
+        "type": "String",
+        "block": "basic_configuration",
+        "list": {
+          "heading": "Mobile No.",
+          "type": "STRING",
+          "order": 5
+        },
+        "form": {
+          "label": "Mobile No.",
+          "component": "textbox",
+          "order": 5
+        }
+      },
+      "password": {
+        "length": "128",
+        "type": "String",
+        "block": "basic_configuration",
+        "form": {
+          "label": "Password",
+          "component": "password",
+          "order": 6
+        }
+      }
+    }
+  }
+}

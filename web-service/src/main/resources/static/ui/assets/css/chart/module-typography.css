@@ -1,0 +1,46 @@
+.solid-graphs .heading-border-bottom-5 {
+  border-bottom: 5px solid #03a9f4;
+}
+.solid-graphs .heading-border-bottom-3 {
+  border-bottom: 3px solid #03a9f4;
+}
+.solid-graphs .heading-border-left-5 {
+  padding-left: 0.5em;
+  border-left: 5px solid #03a9f4;
+}
+.solid-graphs .text-center {
+  text-align: center;
+}
+.solid-graphs .text-left {
+  text-align: left;
+}
+.solid-graphs .text-right {
+  text-align: right;
+}
+.solid-graphs .text-x-large {
+  font-size: 1.75em;
+}
+.solid-graphs .text-large {
+  font-size: 1.15em;
+}
+.solid-graphs .text-medium {
+  font-size: 0.875em;
+}
+.solid-graphs .text-small {
+  font-size: 0.725em;
+}
+.solid-graphs .text-x-small {
+  font-size: 0.625em;
+}
+.solid-graphs .fa {
+  margin-right: 10px;
+}
+.solid-graphs blockquote.testi {
+  line-height: 1.5;
+  color: #333333;
+  padding: 1em;
+  border-left: 0;
+  border-top: 4px solid #efefef;
+  margin: 0;
+  font-size: 15px;
+}

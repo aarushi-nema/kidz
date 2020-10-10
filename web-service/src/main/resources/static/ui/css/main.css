@@ -1,0 +1,162 @@
+@font-face
+{
+	font-family: chalkfont;
+	src: url(Eraser.ttf);
+}
+@font-face
+{
+	font-family: erasdust;
+	src: url(erasdust.ttf);
+}
+@font-face
+{
+	font-family: DKCoolCrayon;
+	src: url(DK_Cool_Crayon.ttf);
+}
+@font-face
+{
+	font-family: whatever-it-takes;
+	src: url(whatever-it-takes.ttf);
+}
+
+
+@font-face
+{
+	font-family: handwriting;
+	src: url(handwriting.ttf);
+}
+
+@font-face
+{
+	font-family: boardfont;
+	src: url(LCR_School_Daze.ttf);
+}
+
+body {
+    background-image: url("chalkboard-background.jpg");
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    color : white;
+    font-family: chalkfont;
+}
+.header {
+	margin-top : 10px;
+	margin-left : 5px;
+	margin-right : 10px;
+	font-family: DKCoolCrayon;
+}
+
+.footer {
+	position : absolute;
+	margin-right : 30px;
+	margin-left : 30px;
+	font-family: DKCoolCrayon;
+	font-size : 12px;
+	text-align: right;
+	width : 94%;
+	bottom: 20px;
+}
+
+.logoDiv1 {
+	margin-top: 100px;
+}
+
+.logoDiv {
+	margin-top: 50px;
+}
+
+
+.textDiv {
+	margin-top: 30px;
+	font-size: 28px;
+	font-family: erasdust;
+}
+
+.linkDiv {
+	margin-top : 70px;
+	font-size: 28px;
+	width : 100%;
+	font-family: chalkfont;	
+	text-align : center;
+	clear : both;
+}
+.linkDiv a {
+	color : #99FF99;
+}
+.whyTextDiv {
+	margin-top: 50px;
+	font-size: 30px;
+	width : 800px;
+	text-align : center;
+	font-family: erasdust;
+}
+
+.whyTextDiv_first {
+	margin-top: 80px;
+	font-size: 30px;
+	width : 800px;
+	text-align : center;
+	font-family: erasdust;
+}
+
+.board_h1 {
+	font-family: DKCoolCrayon;	
+	font-size: 48px;
+}
+
+h1 {
+	font-family: DKCoolCrayon;	
+	font-size: 48px;
+}
+h3 {
+	font-family: DKCoolCrayon;	
+	font-size: 25px;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.moduleLink {
+	text-decoration: none;
+	color: #99FFFF;
+	font-family: DKCoolCrayon;
+}
+
+form {
+padding-top:58px;
+padding-left:42px;
+
+}
+
+form > label {
+
+color:white;
+padding-left:15px;
+font-size: 16px;
+font-family: DKCoolCrayon;
+}
+
+input    {
+width:400px;
+display:block;
+padding-left : 5px;
+border: 1px solid #999;
+height: 33px;
+border-radius:10px;
+margin-top:10px;
+font-weight: normal;
+}
+
+
+.signinButton {
+width:150px;
+position:absolute;
+background:#99FF99;
+color: black;
+border: 0px;
+font-weight:bold;
+font-size:16px;
+font-family: DKCoolCrayon;
+}

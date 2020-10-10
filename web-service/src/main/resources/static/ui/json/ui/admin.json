@@ -1,0 +1,82 @@
+{
+			"resource" : "admin",
+			"api_from_db" : true,
+			"ui_from_db" : true,
+			"table" : true,
+			"tile" : false,
+			"display_name" : "Admin",
+			"page_name" : {
+				"list" : "admin",
+				"add" : "admin",
+				"view" : "admin",
+				"edit" : "admin"
+			},
+			"base_resource" : "user",
+			"add_required" : true,
+			"modify_required" : true,
+			"delete_required" : true,
+			"list" : {
+				"fields":[
+					{
+						"heading":"Name",
+						"type":"STRING",
+						"order":1,
+						"sortable":false,
+						"name":"name"
+					},
+					{
+						"heading":"Email ID",
+						"type":"STRING",
+						"order":4,
+						"sortable":false,
+						"name":"email_id"
+					},
+					{
+						"heading":"Mobile No.",
+						"type":"STRING",
+						"order":5,
+						"sortable":false,
+						"name":"mobile_no"
+					}
+				]
+			},
+			"form" : {
+					"blocks": [
+						{
+							"name":"basic_configuration",
+							"fields":[
+								{
+									"label":"Name",
+									"order":0,
+									"type":"STRING",
+									"component":"textbox",
+									"name":"name"
+								},
+								{
+									"label":"Email ID",
+									"order":4,
+									"type":"STRING",
+									"required":true,
+									"component":"textbox",
+									"name":"email_id"
+								},
+								{
+									"label":"Mobile No.",
+									"order":5,
+									"type":"STRING",
+									"component":"textbox",
+									"name":"mobile_no"
+								},
+								{
+									"label":"Password",
+									"order":6,
+									"type":"STRING",
+									"component":"password",
+									"name":"password"
+								}
+							],
+							"title":"Configuration"
+						}
+					]
+			}
+}

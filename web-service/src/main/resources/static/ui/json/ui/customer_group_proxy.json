@@ -1,0 +1,47 @@
+{
+			"resource" : "customer_group_proxy",
+			"api_from_db" : true,
+			"ui_from_db" : true,
+			"table" : true,
+			"tile" : false,
+			"display_name" : "Customer Group",
+			"menu_context" : "setup",
+			"page_name" : {
+				"list" : "customer_group_proxy",
+				"add" : "customer_group_proxy",
+				"view" : "customer_group_proxy",
+				"edit" : "customer_group_proxy"
+			},
+			"base_resource" : "customer_group",
+			"add_required" : true,
+			"modify_required" : true,
+			"delete_required" : true,
+			"list" : {
+				"fields":[
+					{
+						"heading":"Name",
+						"type":"STRING",
+						"order":1,
+						"sortable":false,
+						"name":"name"
+					}
+				]
+			},
+			"form" : {
+					"blocks": [
+						{
+							"name":"basic_configuration",
+							"fields":[
+								{
+									"label":"Name",
+									"order":1,
+									"type":"STRING",
+									"component":"textbox",
+									"name":"name"
+								}
+							],
+							"title":"Configuration"
+						}
+					]
+			}
+}

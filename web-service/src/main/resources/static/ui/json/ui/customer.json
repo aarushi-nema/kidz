@@ -1,0 +1,1213 @@
+{
+			"resource" : "customer",
+			"table" : true,
+			"tile" : false,
+			"display_name" : "Customer",
+			"page_name" : {
+				"list" : "customer",
+				"add" : "customer",
+				"view" : "customer",
+				"edit" : "customer"
+			},
+			"capability" : [
+				{
+					"key" : "id",
+					"action" : "modify",
+					"label" : "Update"
+				},
+				{
+					"key" : "id",
+					"action" : "delete",
+					"label" : "Delete"
+				}
+			],
+			"add_required" : true,
+			"modify_required" : true,
+			"delete_required" : true,
+			"list" : {
+				"fields":[
+					{
+						"heading":"Country",
+						"card_tag":null,
+						"order":5,
+						"sortable":true,
+						"name":"country"
+					},
+					{
+						"heading":"Customer No.",
+						"card_tag":null,
+						"order":2,
+						"sortable":true,
+						"name":"customer_no"
+					},
+					{
+						"heading":"Email Account",
+						"card_tag":null,
+						"order":6,
+						"sortable":true,
+						"name":"email_account"
+					},
+					{
+						"heading":"City",
+						"card_tag":null,
+						"order":3,
+						"sortable":true,
+						"name":"city"
+					},
+					{
+						"heading":"SMS Account",
+						"card_tag":null,
+						"order":7,
+						"sortable":true,
+						"name":"sms_account"
+					},
+					{
+						"heading":"Name",
+						"card_tag":null,
+						"order":1,
+						"sortable":true,
+						"name":"name"
+					},
+					{
+						"heading":"State",
+						"card_tag":null,
+						"order":4,
+						"sortable":true,
+						"name":"state"
+					},
+					{
+						"heading":"Support Enginner",
+						"card_tag":null,
+						"order":8,
+						"sortable":true,
+						"name":"support_engineer_name"
+					}
+				]
+			},
+			"form" : {
+					"blocks": [
+						{
+							"name":"support_engg",
+							"order":3,
+							"fields":[
+								{
+									"label":"Support Enginner",
+									"foreign_resource":"user",
+									"getterKey":"id",
+									"getterValue":"name",
+									"class_name":"col-sm-6 fix",
+									"order":34,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+										"application":"null",
+										"resource":"user",
+										"query_id":"GET_ALL_SUPPORT_ENGG",
+										"args":"type:!!!SUPPORT-ENGINEER!!!",
+										"key":"id"
+									},
+									"name":"support_engineer_id"
+								}
+							],
+							"title":"Support Enginner"
+						},
+						{
+							"name":"feature_configuration",
+							"order":4,
+							"fields":[
+								{
+									"default_value":"N",
+									"label":"Post Paid Dual Source",
+									"class_name":"col-sm-6 fix",
+									"order":35,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"postPaidDualSourceService"
+								},
+								{
+									"default_value":"N",
+									"label":"Dual Source",
+									"class_name":"col-sm-6 fix",
+									"order":36,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"dual_source_feature"
+								},
+								{
+									"default_value":"N",
+									"label":"Complaint Management",
+									"class_name":"col-sm-6 fix",
+									"order":37,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"complaint_feature"
+								},
+								{
+									"default_value":"N",
+									"label":"Visitor Management",
+									"class_name":"col-sm-6 fix",
+									"order":38,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"visior_log_feature"
+								},
+								{
+									"default_value":"N",
+									"label":"Credit Note Management",
+									"class_name":"col-sm-6 fix",
+									"order":39,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"credit_note_feature"
+								},
+								{
+									"default_value":"METER WISE/SUBSCRIBER WISE",
+									"label":"Billing Type",
+									"class_name":"col-sm-6 fix",
+									"order":40,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "METER WISE","value":"METER WISE"},
+										{"id": "SUBSCRIBER WISE","value":"SUBSCRIBER WISE"}
+									]
+									},
+									"name":"billing_type"
+								},
+								{
+									"default_value":"N",
+									"label":"Air Handling Unit",
+									"class_name":"col-sm-6 fix",
+									"order":41,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"air_handling_unit"
+								},
+								{
+									"default_value":"N",
+									"label":"Chilled Water Plant",
+									"class_name":"col-sm-6 fix",
+									"order":42,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"chilled_water_plant"
+								},
+								{
+									"default_value":"N",
+									"label":"Cooling Tower",
+									"class_name":"col-sm-6 fix",
+									"order":43,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"cooling_tower"
+								},
+								{
+									"default_value":"N",
+									"label":"DG",
+									"class_name":"col-sm-6 fix",
+									"order":44,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"dg"
+								},
+								{
+									"default_value":"N",
+									"label":"Ev Charging",
+									"class_name":"col-sm-6 fix",
+									"order":45,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"ev_charging"
+								},
+								{
+									"default_value":"N",
+									"label":"Fire Sensor",
+									"class_name":"col-sm-6 fix",
+									"order":46,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"fire_sensor"
+								},
+								{
+									"default_value":"N",
+									"label":"Gas Meter",
+									"class_name":"col-sm-6 fix",
+									"order":47,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"gas_meter"
+								},
+								{
+									"default_value":"N",
+									"label":"Havc",
+									"class_name":"col-sm-6 fix",
+									"order":48,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"havc"
+								},
+								{
+									"default_value":"N",
+									"label":"Heating Water Plant",
+									"class_name":"col-sm-6 fix",
+									"order":49,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"heating_water_plant"
+								},
+								{
+									"default_value":"N",
+									"label":"Lift",
+									"class_name":"col-sm-6 fix",
+									"order":50,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"lift"
+								},
+								{
+									"default_value":"N",
+									"label":"Light",
+									"class_name":"col-sm-6 fix",
+									"order":51,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"light"
+								},
+								{
+									"default_value":"N",
+									"label":"Security Camera",
+									"class_name":"col-sm-6 fix",
+									"order":52,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"security_camera"
+								},
+								{
+									"default_value":"N",
+									"label":"Sinage",
+									"class_name":"col-sm-6 fix",
+									"order":53,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"sinage"
+								},
+								{
+									"default_value":"N",
+									"label":"Smart Bin",
+									"class_name":"col-sm-6 fix",
+									"order":54,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"smart_bin"
+								},
+								{
+									"default_value":"N",
+									"label":"Tenant Condense Water",
+									"class_name":"col-sm-6 fix",
+									"order":55,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"tenant_condense_water"
+								},
+								{
+									"default_value":"N",
+									"label":"Water Meter",
+									"class_name":"col-sm-6 fix",
+									"order":56,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"water_meter"
+								},
+								{
+									"default_value":"N",
+									"label":"Water Pump",
+									"class_name":"col-sm-6 fix",
+									"order":57,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"water_pump"
+								},
+								{
+									"default_value":"N",
+									"label":"Water Tank",
+									"class_name":"col-sm-6 fix",
+									"order":58,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"water_tank"
+								},
+								{
+									"default_value":"N",
+									"label":"Weather Station",
+									"class_name":"col-sm-6 fix",
+									"order":59,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"weather_station"
+								},
+								{
+									"default_value":"N",
+									"label":"Zone Controls",
+									"class_name":"col-sm-6 fix",
+									"order":60,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"zone_controls"
+								}
+							],
+							"title":"Feature Configuration"
+						},
+						{
+							"name":"p_c_p_configuration",
+							"order":9,
+							"fields":[
+								{
+									"label":"Merchant Id",
+									"class_name":"col-sm-6 fix",
+									"order":75,
+									"type":"String",
+									"component":"textbox",
+									"name":"paytm_mid"
+								},
+								{
+									"label":"API key",
+									"class_name":"col-sm-6 fix",
+									"order":76,
+									"type":"String",
+									"component":"textbox",
+									"name":"paytm_apikey"
+								},
+								{
+									"label":"Website",
+									"class_name":"col-sm-6 fix",
+									"order":77,
+									"type":"String",
+									"component":"textbox",
+									"name":"paytm_website"
+								}
+							],
+							"title":"Paytm Configuration (Production)"
+						},
+						{
+							"name":"configure_application",
+							"order":2,
+							"fields":[
+								{
+									"label":"Invoice Prefix",
+									"class_name":"col-sm-6 fix",
+									"order":15,
+									"type":"String",
+									"component":"textbox",
+									"name":"invoice_no_prefix"
+								},
+								{
+									"label":"Invoice Template",
+									"class_name":"col-sm-6 fix",
+									"order":16,
+									"type":"String",
+									"component":"textbox",
+									"name":"invoice_template"
+								},
+								{
+									"label":"Receipt Template",
+									"class_name":"col-sm-6 fix",
+									"order":17,
+									"type":"String",
+									"component":"textbox",
+									"name":"receipt_template"
+								},
+								{
+									"label":"Application Type",
+									"class_name":"col-sm-6 fix",
+									"order":18,
+									"type":"String",
+									"hint":"Select the option",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "UNKNOWN","value":"UNKNOWN"},
+										{"id": "NBCC","value":"NBCC"}
+									]
+									},
+									"name":"application_type"
+								},
+								{
+									"default_value":"N",
+									"label":"Multi Utility Application",
+									"class_name":"col-sm-6 fix",
+									"order":19,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"multiUtilityService"
+								},
+								{
+									"default_value":"N",
+									"label":"Solar Billing Application",
+									"class_name":"col-sm-6 fix",
+									"order":20,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"solarBilllingService"
+								},
+								{
+									"default_value":"N",
+									"label":"HES Utility Application",
+									"class_name":"col-sm-6 fix",
+									"order":21,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"utilityService"
+								},
+								{
+									"default_value":"N",
+									"label":"Utility Billing Application",
+									"class_name":"col-sm-6 fix",
+									"order":22,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"utilityBilllingService"
+								},
+								{
+									"default_value":"N",
+									"label":"Asset Monitoring",
+									"class_name":"col-sm-6 fix",
+									"order":23,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"assetMonitoringService"
+								},
+								{
+									"default_value":"N",
+									"label":"EMS Application",
+									"class_name":"col-sm-6 fix",
+									"order":24,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"emsService"
+								},
+								{
+									"default_value":"N",
+									"label":"Prepaid Application",
+									"class_name":"col-sm-6 fix",
+									"order":25,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"prepaidService"
+								},
+								{
+									"default_value":"N",
+									"label":"Prepaid EB Application",
+									"class_name":"col-sm-6 fix",
+									"order":26,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"electricityBoardService"
+								},
+								{
+									"default_value":"N",
+									"label":"Prepaid Builder Application",
+									"class_name":"col-sm-6 fix",
+									"order":27,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"builderService"
+								},
+								{
+									"default_value":"N",
+									"label":"Weather Station",
+									"class_name":"col-sm-6 fix",
+									"order":28,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"weatherstation"
+								},
+								{
+									"default_value":"N",
+									"label":"Water Application",
+									"class_name":"col-sm-6 fix",
+									"order":29,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"waterService"
+								},
+								{
+									"default_value":"N",
+									"label":"Gas Application",
+									"class_name":"col-sm-6 fix",
+									"order":30,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"gasService"
+								},
+								{
+									"default_value":"N",
+									"label":"ATM Application",
+									"class_name":"col-sm-6 fix",
+									"order":31,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "Y","value":"Yes"},
+										{"id": "N","value":"No"}
+									]
+									},
+									"name":"atmService"
+								},
+								{
+									"label":"Type of Source",
+									"class_name":"col-sm-6 fix",
+									"order":32,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "DG","value":"DG"},
+										{"id": "SOLAR","value":"SOLAR"}
+									]
+									},
+									"name":"dual_type"
+								},
+								{
+									"label":"Site Type",
+									"class_name":"col-sm-6 fix",
+									"order":33,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "RESEDENTIAL","value":"RESEDENTIAL"},
+										{"id": "COMMERCIAL","value":"COMMERCIAL"},
+										{"id": "WATER UTILITY","value":"WATER UTILITY"},
+										{"id": "ELECTRICITY UTILITY","value":"ELECTRICITY UTILITY"},
+										{"id": "GAS UTITLITY","value":"GAS UTITLITY"}
+									]
+									},
+									"name":"site_type"
+								}
+							],
+							"title":"Configure Application"
+						},
+						{
+							"name":"smart_interface_detail",
+							"order":6,
+							"fields":[
+								{
+									"label":"Base URL",
+									"class_name":"col-sm-6 fix",
+									"order":67,
+									"type":"String",
+									"component":"textbox",
+									"name":"smart_interface_base_url"
+								},
+								{
+									"label":"User Name",
+									"class_name":"col-sm-6 fix",
+									"order":68,
+									"type":"String",
+									"component":"textbox",
+									"name":"smart_interface_username"
+								},
+								{
+									"label":"Password",
+									"class_name":"col-sm-6 fix",
+									"order":69,
+									"type":"String",
+									"component":"textbox",
+									"name":"smart_interface_password"
+								},
+								{
+									"label":"Application",
+									"class_name":"col-sm-6 fix",
+									"order":70,
+									"type":"String",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "BUILDING-MANAGEMENT-SYSTEM","value":"BUILDING-MANAGEMENT-SYSTEM"}
+									]
+									},
+									"name":"smart_interface_application"
+								}
+							],
+							"title":"Smart Interface Detail"
+						},
+						{
+							"name":"dass_configuration",
+							"order":7,
+							"fields":[
+								{
+									"label":"Profile",
+									"foreign_resource":"dass_profile",
+									"getterKey":"id",
+									"getterValue":"name",
+									"class_name":"col-sm-6 fix",
+									"order":71,
+									"type":"String",
+									"hint":"Select the option",
+									"component":"dropdown",
+									"datasource":{
+										"application":"null",
+										"resource":"dass_profile",
+										"query_id":"GET_ALL",
+										"parameters":[
+											{
+											"value": "INTEGRATION_ADMIN",
+											"name": "type"
+											}
+										],
+										"key":"id"
+									},
+									"name":"dass_profile_id"
+								}
+							],
+							"title":"Dass Configuration"
+						},
+						{
+							"name":"integration_partner_detail",
+							"order":5,
+							"fields":[
+								{
+									"label":"Our Site Id",
+									"class_name":"col-sm-6 fix",
+									"order":61,
+									"type":"String",
+									"component":"textbox",
+									"name":"our_site_id"
+								},
+								{
+									"label":"Partner Site Id",
+									"class_name":"col-sm-6 fix",
+									"order":62,
+									"type":"String",
+									"component":"textbox",
+									"name":"integration_partner_site_id"
+								},
+								{
+									"label":"Integration Admin",
+									"getterKey":"id",
+									"getterValue":"name",
+									"class_name":"col-sm-6 fix",
+									"order":63,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+										"application":"null",
+										"resource":"user",
+										"query_id":"GET_INTEGRATION_ADMIN",
+										"parameters":[
+											{
+											"value": "INTEGRATION-ADMIN",
+											"name": "type"
+											}
+										],
+										"key":"id"
+									},
+									"name":"integration_admin_id"
+								},
+								{
+									"label":"Integration Partner",
+									"class_name":"col-sm-6 fix",
+									"order":64,
+									"type":"String",
+									"hint":"Select",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "I-SOCIETY-MANAGER","value":"I-SOCIETY-MANAGER"}
+									]
+									},
+									"name":"integration_partner"
+								},
+								{
+									"label":"API Key",
+									"class_name":"col-sm-6 fix",
+									"order":65,
+									"type":"String",
+									"component":"textbox",
+									"name":"integration_partner_api_key"
+								},
+								{
+									"label":"Base URL",
+									"class_name":"col-sm-6 fix",
+									"order":66,
+									"type":"String",
+									"component":"textbox",
+									"name":"integration_partner_base_url"
+								}
+							],
+							"title":"Integration Partner Detail"
+						},
+						{
+							"name":"customer_configuration",
+							"order":1,
+							"fields":[
+								{
+									"label":"Name",
+									"class_name":"col-sm-6 fix",
+									"order":1,
+									"type":"String",
+									"component":"textbox",
+									"name":"name"
+								},
+								{
+									"label":"Short Name",
+									"class_name":"col-sm-6 fix",
+									"order":2,
+									"type":"String",
+									"component":"textbox",
+									"name":"short_name"
+								},
+								{
+									"label":"Customer No.",
+									"class_name":"col-sm-6 fix",
+									"order":3,
+									"type":"String",
+									"component":"textbox",
+									"name":"customer_no"
+								},
+								{
+									"label":"Address",
+									"class_name":"col-sm-12 fix",
+									"order":4,
+									"type":"String",
+									"component":"textbox",
+									"name":"address1"
+								},
+								{
+									"label":"Street",
+									"class_name":"col-sm-12 fix",
+									"order":5,
+									"type":"String",
+									"component":"textbox",
+									"name":"address2"
+								},
+								{
+									"label":"Landmark",
+									"class_name":"col-sm-12 fix",
+									"order":6,
+									"type":"String",
+									"component":"textbox",
+									"name":"address3"
+								},
+								{
+									"label":"City",
+									"class_name":"col-sm-6 fix",
+									"order":7,
+									"type":"String",
+									"component":"textbox",
+									"name":"city"
+								},
+								{
+									"label":"State",
+									"class_name":"col-sm-6 fix",
+									"order":8,
+									"type":"String",
+									"component":"textbox",
+									"name":"state"
+								},
+								{
+									"label":"Country",
+									"class_name":"col-sm-6 fix",
+									"order":9,
+									"type":"String",
+									"component":"textbox",
+									"name":"country"
+								},
+								{
+									"default_value":"IST",
+									"label":"TimeZone",
+									"class_name":"col-sm-6 fix",
+									"order":10,
+									"type":"String",
+									"hint":"Select the option",
+									"component":"dropdown",
+									"datasource":{
+									"possible_value":[
+										{"id": "IST","value":"IST"}
+									]
+									},
+									"name":"timezone"
+								},
+								{
+									"label":"Email Account",
+									"getterKey":"id",
+									"getterValue":"name",
+									"class_name":"col-sm-6 fix",
+									"order":11,
+									"type":"String",
+									"hint":"Select the option",
+									"component":"dropdown",
+									"datasource":{
+										"application":"null",
+										"resource":"email_account",
+										"query_id":"GET_ALL",
+										"parameters":[
+											{
+											"value": "INTEGRATION_ADMIN",
+											"name": "type"
+											}
+										],
+										"key":"id"
+									},
+									"name":"email_account"
+								},
+								{
+									"label":"SMS Account",
+									"foreign_resource":"sms_account",
+									"getterKey":"id",
+									"getterValue":"name",
+									"class_name":"col-sm-6 fix",
+									"order":12,
+									"type":"String",
+									"hint":"Select the option",
+									"component":"dropdown",
+									"datasource":{
+										"application":"null",
+										"resource":"sms_account",
+										"query_id":"GET_ALL",
+										"parameters":[
+											{
+											"value": "INTEGRATION_ADMIN",
+											"name": "type"
+											}
+										],
+										"key":"id"
+									},
+									"name":"sms_account"
+								},
+								{
+									"label":"Security Code",
+									"class_name":"col-sm-6 fix",
+									"order":13,
+									"type":"String",
+									"component":"textbox",
+									"name":"security_code"
+								},
+								{
+									"label":"Customer Group",
+									"foreign_resource":"customer_group",
+									"getterKey":"id",
+									"getterValue":"name",
+									"class_name":"col-sm-6 fix",
+									"order":14,
+									"type":"String",
+									"hint":"Select the option",
+									"component":"dropdown",
+									"datasource":{
+										"application":"null",
+										"resource":"customer_group",
+										"query_id":"GET_ALL",
+										"parameters":[
+											{
+											"value": "dummy",
+											"name": "dummy"
+											}
+										],
+										"key":"id"
+									},
+									"name":"customer_group_id"
+								}
+							],
+							"title":"Customer Configuration"
+						},
+						{
+							"name":"p_c_t_configuration",
+							"order":8,
+							"fields":[
+								{
+									"label":"Merchant Id",
+									"class_name":"col-sm-6 fix",
+									"order":72,
+									"type":"String",
+									"component":"textbox",
+									"name":"paytm_test_mid"
+								},
+								{
+									"label":"API key",
+									"class_name":"col-sm-6 fix",
+									"order":73,
+									"type":"String",
+									"component":"textbox",
+									"name":"paytm_test_apikey"
+								},
+								{
+									"label":"Website",
+									"class_name":"col-sm-6 fix",
+									"order":74,
+									"type":"String",
+									"component":"textbox",
+									"name":"paytm_test_website"
+								}
+							],
+							"title":"Paytm Configuration (Test)"
+						}
+					]
+			}
+}

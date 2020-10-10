@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html style="overflow: hidden;">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>Admin Login</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <!-- Bootstrap -->
+      <link href="/ui/css/bootstrap.css" rel="stylesheet">
+      <link href="/ui/css/font-awesome.css" rel="stylesheet">
+      <link href="/ui/css/chosen.css" rel="stylesheet">
+      <link href="/ui/css/animate.css" rel="stylesheet">
+      <link href="/ui/css/bootstrap-checkbox.css" rel="stylesheet">
+      <link href="/ui/css/c2p_customer.css" rel="stylesheet">
+       <script type="text/javascript" src="/ui/js/apartment_login_handler.js">
+	    </script> 
+	    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js">
+	    </script> 
+	    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/function.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/DataHandler.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/json.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/base64.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/bootstrap.min.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/jquery.blockUI.js">
+	    </script> 
+          <script type="text/javascript" src="/ui/js/function.js">
+        </script> 
+        <script type="text/javascript" src="/ui/js/DataHandler.js">
+        </script> 
+        <script type="text/javascript" src="/ui/js/json.js">
+        </script>   
+   </head>
+   <body style="height:100%;">
+      <div style="display: none;" class="mask">
+         <div style="display: none;" id="loader"></div>
+      </div>
+      <script>
+      	function validation() {
+    	  var reason="";
+    	  if (reason != "") {
+    	  alert(reason); 
+    	  return false;
+    	  }
+    	  return true;
+    	  }
+      </script>
+      <div class="apps">
+         <div id="wrap">
+            <div class="row">
+               <button class="btn show-code" id="pop" data-toggle="modal" data-target="#modal" style="display:none">
+               how code
+               </button>
+               <div style="padding-left: 265px;margin-top: 50px;" id="content" class="col-md-12 full-page login">
+                  <div class="col-sm-8"  id="loginleftimage">
+				    		<img src="/images/apartment.jpg" style="width:95%">
+	              </div>
+                  <div class="col-sm-4">
+                     <div class="welcome animated bounceIn">
+                        <h3>Welcome to <strong>Connect 2 Apartment</strong></h3>
+                        <form id="form-signin" class="form-signin">
+                           <section>
+                              <p>Admin Login</p>
+                              <div id="alert"></div>
+                              <div class="input-group" id="user">
+                                 <input class="form-control" id="username" name="username" placeholder="Enter Login ID" type="text">
+                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                              </div>
+                              <div class="input-group" id="pass">
+                                 <input class="form-control" id="password" name="password" placeholder="Password" type="password">
+                                 <div class="input-group-addon"><i class="fa fa-key"></i></div>
+                              </div>
+                           </section>
+                           <section class="controls">
+                              <style>
+                                 .btn.btn-hotpink {background-color: #8F2C3B;color: #f2f2f2;}.btn.btn-hotpink {background-color: #8F2C3B;color: #f2f2f2; }.btn.btn-hotpink:hover {background-color: #8F2C3B;color: white; }
+                              </style>
+                           </section>
+                           <section class="new-acc">
+                              <input value="Login" class="btn btn-hotpink margin-bottom-20"  onclick="LoginHandler.call();" type="button">
+                           </section>
+                        </form>
+                     </div>                   
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

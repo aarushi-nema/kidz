@@ -1,0 +1,119 @@
+.tab-graph .tab-container > label {
+  display: inline-block;
+  background: #DEDEDE;
+  color: #676767;
+  padding: 12px 20px;
+  min-width: 120px;
+  margin-right: -3px;
+  margin-bottom: 0;
+  text-align: center;
+  border-left: 1px solid #D2D2D2;
+  border-top: 1px solid #D2D2D2;
+  border-right: 1px solid #D2D2D2;
+  -webkit-transform: translateY(3px);
+     -moz-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+       -o-transform: translateY(3px);
+          transform: translateY(3px);
+  -webkit-transition: all 0.2s ease-in;
+     -moz-transition: all 0.2s ease-in;
+       -o-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
+}
+.tab-graph .tab-container > label:last-child {
+  margin-right: 0 !important;
+}
+.tab-graph .tab-container > label:hover {
+  cursor: pointer;
+}
+.tab-graph .tab-container .tab-content-container {
+  background: white;
+}
+.tab-graph .tab-container > input {
+  display: none;
+}
+.tab-graph .tab-container > input:checked + label {
+  background: #FFFFFF;
+  cursor: default;
+  color: #333;
+  position: relative;
+  z-index: 10;
+  border-left: 1px solid #D2D2D2;
+  border-top: 1px solid #D2D2D2;
+  border-right: 1px solid #D2D2D2;
+  -webkit-transform: translateY(1px);
+     -moz-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+       -o-transform: translateY(1px);
+          transform: translateY(1px);
+}
+.tab-graph .tab-container > input.tab-content-1:checked ~ ul > li.tab-content-1 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-2:checked ~ ul > li.tab-content-2 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-3:checked ~ ul > li.tab-content-3 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-4:checked ~ ul > li.tab-content-4 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-5:checked ~ ul > li.tab-content-5 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-6:checked ~ ul > li.tab-content-6 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-7:checked ~ ul > li.tab-content-7 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-8:checked ~ ul > li.tab-content-8 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-9:checked ~ ul > li.tab-content-9 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-10:checked ~ ul > li.tab-content-10 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-11:checked ~ ul > li.tab-content-11 {
+  display: block;
+}
+.tab-graph .tab-container > input.tab-content-12:checked ~ ul > li.tab-content-12 {
+  display: block;
+}
+.tab-graph .tab-container .tab-content-container {
+  position: relative;
+  list-style: none;
+  display: block;
+  margin-top: 0;
+}
+.tab-graph .tab-container .tab-content-container > .tab-content-1,
+.tab-graph .tab-container .tab-content-container > .tab-content-2,
+.tab-graph .tab-container .tab-content-container > .tab-content-3,
+.tab-graph .tab-container .tab-content-container > .tab-content-4,
+.tab-graph .tab-container .tab-content-container > .tab-content-5,
+.tab-graph .tab-container .tab-content-container > .tab-content-6,
+.tab-graph .tab-container .tab-content-container > .tab-content-7,
+.tab-graph .tab-container .tab-content-container > .tab-content-8,
+.tab-graph .tab-container .tab-content-container > .tab-content-9,
+.tab-graph .tab-container .tab-content-container > .tab-content-10,
+.tab-graph .tab-container .tab-content-container > .tab-content-11,
+.tab-graph .tab-container .tab-content-container > .tab-content-12 {
+  display: none;
+}
+.tab-graph .tab-container .tab-content-container > .tab-content-1 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-2 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-3 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-4 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-5 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-6 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-7 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-8 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-9 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-10 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-11 > div,
+.tab-graph .tab-container .tab-content-container > .tab-content-12 > div {
+  padding: 1em;
+}

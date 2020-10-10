@@ -1,0 +1,427 @@
+/* Use border-box sizing in all elements */
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+/**
+ * Remove default margin.
+*/
+body {
+  margin: 0;
+  font-size: 100%;
+  height: 100%;
+  background: #F3F3F3;
+  font-family: "Raleway", "serif", "Arial" !important;
+  color: #111;
+}
+.solid-graphs * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.solid-graphs {
+  /**
+     * 1. Correct `inline-block` display not defined in IE 8/9.
+     * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+     */
+  /**
+     * Prevent modern browsers from displaying `audio` without controls.
+     * Remove excess height in iOS 5 devices.
+    */
+  /**
+     * Address `[hidden]` styling not present in IE 8/9/10.
+     * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+    */
+  /* Links
+       ========================================================================== */
+  /**
+     * Remove the gray background color from active links in IE 10.
+    */
+  /**
+     * Improve readability when focused and also mouse hovered in all browsers.
+    */
+  /* Text-level semantics
+       ========================================================================== */
+  /**
+     * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+    */
+  /**
+     * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+     */
+  /**
+     * Address styling not present in Safari and Chrome.
+    */
+  /**
+     * Address variable `h1` font-size and margin within `section` and `article`
+     * contexts in Firefox 4+, Safari, and Chrome.
+    */
+  /**
+     * Address styling not present in IE 8/9.
+    */
+  /**
+     * Address inconsistent and variable font size in all browsers.
+    */
+  /**
+     * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+    */
+  /* Embedded content
+       ========================================================================== */
+  /**
+     * Remove border when inside `a` element in IE 8/9/10.
+    */
+  /**
+     * Correct overflow not hidden in IE 9/10/11.
+    */
+  /* Grouping content
+       ========================================================================== */
+  /**
+     * Address margin not present in IE 8/9 and Safari.
+    */
+  /**
+     * Address differences between Firefox and other browsers.
+     */
+  /**
+     * Contain overflow in all browsers.
+    */
+  /**
+     * Address odd `em`-unit font size rendering in all browsers.
+    */
+  /* Forms
+       ========================================================================== */
+  /**
+     * Known limitation: by default, Chrome and Safari on OS X allow very limited
+     * styling of `select`, unless a `border` property is set.
+    */
+  /**
+     * 1. Correct color not being inherited.
+     *    Known issue: affects color of disabled elements.
+     * 2. Correct font properties not being inherited.
+     * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+    */
+  /**
+     * Address `overflow` set to `hidden` in IE 8/9/10/11.
+    */
+  /**
+     * Address inconsistent `text-transform` inheritance for `button` and `select`.
+     * All other form control elements do not inherit `text-transform` values.
+     * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+     * Correct `select` style inheritance in Firefox.
+    */
+  /**
+     * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+     *    and `video` controls.
+     * 2. Correct inability to style clickable `input` types in iOS.
+     * 3. Improve usability and consistency of cursor style between image-type
+     *    `input` and others.
+    */
+  /**
+     * Re-set default cursor for disabled elements.
+    */
+  /**
+     * Remove inner padding and border in Firefox 4+.
+    */
+  /**
+     * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+     * the UA stylesheet.
+    */
+  /**
+     * It's recommended that you don't attempt to style these elements.
+     * Firefox's implementation doesn't respect box-sizing, padding, or width.
+     *
+     * 1. Address box sizing set to `content-box` in IE 8/9/10.
+     * 2. Remove excess padding in IE 8/9/10.
+     */
+  /**
+     * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+     * `font-size` values of the `input`, it causes the cursor style of the
+     * decrement button to change from `default` to `text`.
+    */
+  /**
+     * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+     * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+     *    (include `-moz` to future-proof).
+     */
+  /**
+     * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+     * Safari (but not Chrome) clips the cancel button when the search input has
+     * padding (and `textfield` appearance).
+    */
+  /**
+     * Define consistent border, margin, and padding.
+    */
+  /**
+     * 1. Correct `color` not being inherited in IE 8/9/10/11.
+     * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+    */
+  /**
+     * Remove default vertical scrollbar in IE 8/9/10/11.
+    */
+  /**
+     * Don't inherit the `font-weight` (applied by a rule above).
+     * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+    */
+  /* Tables
+       ========================================================================== */
+  /**
+     * Remove most spacing between table cells.
+    */
+  /* headers, major third */
+}
+.solid-graphs article,
+.solid-graphs aside,
+.solid-graphs details,
+.solid-graphs figcaption,
+.solid-graphs figure,
+.solid-graphs footer,
+.solid-graphs header,
+.solid-graphs hgroup,
+.solid-graphs main,
+.solid-graphs menu,
+.solid-graphs nav,
+.solid-graphs section,
+.solid-graphs summary {
+  display: block;
+}
+.solid-graphs audio,
+.solid-graphs canvas,
+.solid-graphs progress,
+.solid-graphs video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.solid-graphs audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+.solid-graphs [hidden],
+.solid-graphs template {
+  display: none;
+}
+.solid-graphs a {
+  background-color: transparent;
+  text-decoration: none;
+}
+.solid-graphs a:link,
+.solid-graphs a:visited {
+  outline: 0;
+  color: #08648C;
+}
+.solid-graphs a:active,
+.solid-graphs a:hover {
+  outline: 0;
+  color: #127FBE;
+}
+.solid-graphs abbr[title] {
+  border-bottom: 1px dotted;
+}
+.solid-graphs b,
+.solid-graphs strong {
+  font-weight: bolder;
+}
+.solid-graphs dfn {
+  font-style: italic;
+}
+.solid-graphs h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+.solid-graphs mark {
+  background: #ff0;
+  color: #000;
+}
+.solid-graphs small {
+  font-size: 80%;
+}
+.solid-graphs sub,
+.solid-graphs sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.solid-graphs sup {
+  top: -0.5em;
+}
+.solid-graphs sub {
+  bottom: -0.25em;
+}
+.solid-graphs img {
+  display: block;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
+.solid-graphs iframe {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.solid-graphs svg:not(:root) {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.solid-graphs figure {
+  margin: 1em 40px;
+}
+.solid-graphs hr {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+.solid-graphs pre {
+  overflow: auto;
+}
+.solid-graphs code,
+.solid-graphs kbd,
+.solid-graphs pre,
+.solid-graphs samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+.solid-graphs button,
+.solid-graphs input,
+.solid-graphs optgroup,
+.solid-graphs select,
+.solid-graphs textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+.solid-graphs button {
+  overflow: visible;
+}
+.solid-graphs button,
+.solid-graphs select {
+  text-transform: none;
+}
+.solid-graphs button,
+.solid-graphs html input[type="button"],
+.solid-graphs input[type="reset"],
+.solid-graphs input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  border: 0;
+}
+.solid-graphs button[disabled],
+.solid-graphs html input[disabled] {
+  cursor: default;
+}
+.solid-graphs button::-moz-focus-inner,
+.solid-graphs input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.solid-graphs input {
+  line-height: normal;
+}
+.solid-graphs input[type="checkbox"],
+.solid-graphs input[type="radio"] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+.solid-graphs input[type="number"]::-webkit-inner-spin-button,
+.solid-graphs input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+.solid-graphs input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.solid-graphs input[type="search"]::-webkit-search-cancel-button,
+.solid-graphs input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.solid-graphs fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+.solid-graphs legend {
+  border: 0;
+  padding: 0;
+}
+.solid-graphs textarea {
+  overflow: auto;
+}
+.solid-graphs optgroup {
+  font-weight: bold;
+}
+.solid-graphs table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1em;
+}
+.solid-graphs td,
+.solid-graphs th {
+  padding: 0.35em 1em;
+}
+.solid-graphs tr {
+  display: table-row;
+}
+.solid-graphs ul,
+.solid-graphs ol {
+  margin: 0;
+  padding: 0;
+}
+.solid-graphs ul {
+  list-style: none;
+}
+.solid-graphs ol {
+  list-style: none;
+  counter-reset: li;
+}
+.solid-graphs h1,
+.solid-graphs h2,
+.solid-graphs h3,
+.solid-graphs h4,
+.solid-graphs h5,
+.solid-graphs h6 {
+  font-family: "Lato", "serif", "Arial";
+  font-weight: 600;
+}
+.solid-graphs h1,
+.solid-graphs h2,
+.solid-graphs h3,
+.solid-graphs h4,
+.solid-graphs h5 {
+  line-height: 1.5;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.solid-graphs h1 {
+  font-size: 2.441em;
+}
+.solid-graphs h2 {
+  font-size: 1.953em;
+}
+.solid-graphs h3 {
+  font-size: 1.563em;
+}
+.solid-graphs h4 {
+  font-size: 1.25em;
+}
+.solid-graphs h5 {
+  font-size: 1em;
+}
+.solid-graphs h6 {
+  font-size: 0.8em;
+}
+.solid-graphs p {
+  line-height: 1.45;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html style="overflow: hidden;">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>Student Login - !!!brandname!!!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <!-- Bootstrap -->
+      <link href="/ui/css/bootstrap.css" rel="stylesheet">
+      <link href="/ui/css/font-awesome.css" rel="stylesheet">
+      <link href="/ui/css/chosen.css" rel="stylesheet">
+      <link href="/ui/css/animate.css" rel="stylesheet">
+      <link href="/ui/css/bootstrap-checkbox.css" rel="stylesheet">
+      <link href="/ui/css/c2p_customer.css" rel="stylesheet">
+       <script type="text/javascript" src="/ui/js/login_handler.js">
+	    </script> 
+	    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js">
+	    </script> 
+	    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/function.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/DataHandler.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/json.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/base64.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/bootstrap.min.js">
+	    </script> 
+	    <script type="text/javascript" src="/ui/js/jquery.blockUI.js">
+	    </script> 
+          <script type="text/javascript" src="/ui/js/function.js">
+        </script> 
+        <script type="text/javascript" src="/ui/js/DataHandler.js">
+        </script> 
+        <script type="text/javascript" src="/ui/js/json.js">
+        </script>   
+   </head>
+   <body class="brownish-scheme" style="height:100%;">
+      <div style="display: none;" class="mask">
+         <div style="display: none;" id="loader"></div>
+      </div>
+      <script>
+      	function validation() {
+    	  var reason="";
+    	  if (reason != "") {
+    	  alert(reason); 
+    	  return false;
+    	  }
+    	  return true;
+    	  }
+      </script>
+      <div class="apps">
+         <div id="wrap">
+            <div class="row">
+               <button class="btn show-code" id="pop" data-toggle="modal" data-target="#modal" style="display:none">
+               how code
+               </button>
+               <div style="padding-left: 265px;" id="content" class="col-md-12 full-page login">
+                  <div class="col-sm-8"  id="loginleftimage">
+				    		<img src="!!!rightside!!!" style="width:95%">
+							<span id="customurl" name="customurl" style="display:none">http://drishti.conductexam.com</span>
+			
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="welcome animated bounceIn">
+                        <img src="!!!logo!!!" alt="" class="logo" style="width:80%;max-height: 200px; "><br><br>
+                        <h3>Welcome to <strong>!!!brandname!!!</strong></h3>
+                        <form id="form-signin" class="form-signin">
+                           <section>
+                              <p>Student Login</p>
+                              <div id="alert"></div>
+                              <div class="input-group" id="user">
+                                 <input class="form-control" id="username" name="username" placeholder="Enter Mobile No." type="text">
+                                 <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                              </div>
+                              <div class="input-group" id="pass">
+                                 <input class="form-control" id="password" name="password" placeholder="Password" type="password">
+                                 <div class="input-group-addon"><i class="fa fa-key"></i></div>
+                              </div>
+                           </section>
+                           <section class="controls">
+                              <style>
+                                 .btn.btn-hotpink {background-color: #8F2C3B;color: #f2f2f2;}.btn.btn-hotpink {background-color: #8F2C3B;color: #f2f2f2; }.btn.btn-hotpink:hover {background-color: #8F2C3B;color: white; }
+                              </style>
+                              <a style="color:#428BCA;" href="#" onclick="forgotpassword(this)">&nbsp</a>
+                                 <button type="button" class="btn btn-primary pull-right" id="login" name="login" onclick="LoginHandler.call();" ">Login</button>
+                              <!--<a href="#" style="background-color: red;border-color: red; border-image: none; border-style: solid;border-width: 7px 11px 4px;box-shadow: 0 -2px #bbb inset;color: #333;cursor: pointer;position: relative;text-align: center;vertical-align: top;" class="pull-center" onclick="window.location='Register'">New User Registration</a>-->
+                           </section>
+                           <section class="new-acc">
+                              <input value="New User Registration" class="btn btn-hotpink margin-bottom-20" onclick="window.location='!!!register_link!!!'" type="button">
+                           </section>
+                        </form>
+                     </div>                   
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

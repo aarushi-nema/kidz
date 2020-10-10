@@ -1,0 +1,22 @@
+{
+			"resource" : "customer_group",
+			"table" : true,
+			"tile" : false,
+			"page_name" : {
+				"list" : "customer_group",
+				"add" : "customer_group",
+				"view" : "customer_group",
+				"edit" : "customer_group"
+			},
+			"add_required" : true,
+			"modify_required" : true,
+			"delete_required" : true,
+			"list" : {
+				"fields":[
+				]
+			},
+			"form" : {
+					"blocks": [
+					]
+			}
+}

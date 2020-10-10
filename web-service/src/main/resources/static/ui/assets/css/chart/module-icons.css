@@ -1,0 +1,139 @@
+.solid-graphs .icon-bx-container {
+  width: 100%;
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 40px !important;
+}
+.solid-graphs .icon-bx-container h5 {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1;
+  color: #333;
+  font-weight: 700;
+  font-size: 20px;
+}
+.solid-graphs .icon-bx-container p {
+  color: #999;
+  font-family: "Lato", serif, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+.solid-graphs .icon-bx-container.icon-bx-container-ctr {
+  text-align: center !important;
+  padding: 10px;
+  margin-bottom: 20px !important;
+}
+.solid-graphs .icon-bx-container.icon-bx-container-ctr .icon-bx {
+  position: relative !important;
+  margin: 5px auto 15px auto;
+}
+.solid-graphs .icon-bx-container .icon-bx {
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 0;
+  left: 0;
+  background: #03a9f4;
+  -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+          border-radius: 100%;
+  -webkit-transition: all 0.4s ease-in-out;
+     -moz-transition: all 0.4s ease-in-out;
+       -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+}
+.solid-graphs .icon-bx-container .icon-bx.icon-bx-no-bg {
+  background: none !important;
+}
+.solid-graphs .icon-bx-container .icon-bx.icon-bx-no-bg a > i.fa {
+  color: #03a9f4;
+  line-height: initial;
+  font-size: 46px;
+  -webkit-transition: all 0.4s ease-in-out;
+     -moz-transition: all 0.4s ease-in-out;
+       -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+}
+.solid-graphs .icon-bx-container .icon-bx.icon-bx-bdr {
+  border: 2px solid #03a9f4;
+  background: none !important;
+}
+.solid-graphs .icon-bx-container .icon-bx.icon-bx-bdr a > i.fa {
+  color: #03a9f4;
+}
+.solid-graphs .icon-bx-container .icon-bx.icon-bx-rec {
+  -webkit-border-radius: 8px !important;
+     -moz-border-radius: 8px !important;
+          border-radius: 8px !important;
+}
+.solid-graphs .icon-bx-container .icon-bx.icon-bx-rec.icon-bx-rec-bdr {
+  background: none;
+  border: 2px solid #03a9f4;
+}
+.solid-graphs .icon-bx-container .icon-bx.icon-bx-rec.icon-bx-rec-bdr a > i.fa {
+  color: #03a9f4;
+}
+.solid-graphs .icon-bx-container .icon-bx a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+}
+.solid-graphs .icon-bx-container .icon-bx a i.fa {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+  line-height: 64px;
+  margin: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+     -moz-transition: all 0.4s ease-in-out;
+       -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+}
+.solid-graphs .icon-bx-container:hover .icon-bx.icon-bx-no-bg a > i.fa,
+.solid-graphs .icon-bx-container:hover .icon-bx.icon-bx-bdr a > i.fa,
+.solid-graphs .icon-bx-container:hover .icon-bx.icon-bx-rec.icon-bx-rec-bdr a > i.fa {
+  color: #333;
+}
+.solid-graphs .icon-bx-container:hover .icon-bx {
+  background: #333;
+}
+.solid-graphs .icon-bx-container:hover .icon-bx.icon-bx-bdr,
+.solid-graphs .icon-bx-container:hover .icon-bx.icon-bx-rec-bdr {
+  border-color: #333;
+}
+.solid-graphs .s-icon {
+  display: inline-block;
+  font-size: 26px;
+  color: #333;
+  text-align: center;
+  margin: 6px 6px 10px 0;
+  -webkit-transition: all 0.2s ease-in;
+     -moz-transition: all 0.2s ease-in;
+       -o-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
+}
+.solid-graphs .s-icon.s-icon-bdr {
+  border: 1px solid #333;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+.solid-graphs .s-icon.s-icon-bdr:hover {
+  background: #333;
+  color: white;
+}
+.solid-graphs .icn-container i {
+  color: #03a9f4;
+}

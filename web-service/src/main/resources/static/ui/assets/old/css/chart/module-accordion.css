@@ -1,0 +1,117 @@
+.solid-graphs .accordion-container > .accordion-level > input {
+  display: none;
+}
+.solid-graphs .accordion-container > .accordion-level > input:checked ~ .accordion-content {
+  max-height: 1000px;
+  display: block;
+}
+.solid-graphs .accordion-container > .accordion-level > input:checked ~ .accordion-content .content {
+  padding: 20px 20px 0px 20px;
+}
+.solid-graphs .accordion-container > .accordion-level > input:checked ~ label {
+  border-bottom: 1px solid #c1c1c1;
+}
+.solid-graphs .accordion-container > .accordion-level > input:checked ~ label .acc-arrow {
+  -webkit-transform: rotateZ(-180deg);
+     -moz-transform: rotateZ(-180deg);
+          transform: rotateZ(-180deg);
+}
+.solid-graphs .accordion-container > .accordion-level > input:checked ~ label .acc-plus {
+  display: none;
+}
+.solid-graphs .accordion-container > .accordion-level > input:checked ~ label .acc-minus {
+  display: block;
+}
+.solid-graphs .accordion-container > .accordion-level > label {
+  position: relative;
+  height: 40px;
+  display: block;
+  width: 100%;
+  padding: 5px 5px 5px 25px;
+  line-height: 32px;
+  color: #333;
+  background: #fbfbfb;
+  border-top: 1px solid #c1c1c1;
+  border-left: 1px solid #c1c1c1;
+  border-right: 1px solid #c1c1c1;
+  margin-bottom: 0;
+}
+.solid-graphs .accordion-container > .accordion-level > label.pad-5 {
+  padding-left: 35px !important;
+  padding-right: 5px !important;
+}
+.solid-graphs .accordion-container > .accordion-level > label.simple-d {
+  background: none !important;
+  color: #333;
+  border-top: 0 !important;
+  line-height: 1.5 !important;
+  border-bottom: 1px solid #eee !important;
+  height: auto !important;
+  font-weight: bold;
+}
+.solid-graphs .accordion-container > .accordion-level > label.simple-d.simple-d-bdr {
+  border-top: 1px solid #c1c1c1 !important;
+  border-left: 1px solid #c1c1c1 !important;
+  border-right: 1px solid #c1c1c1 !important;
+  border-bottom: none !important;
+}
+.solid-graphs .accordion-container > .accordion-level > label i[class^="icon-"] {
+  position: absolute;
+  left: 10px;
+  margin-right: 8px;
+}
+.solid-graphs .accordion-container > .accordion-level > label:hover {
+  cursor: pointer;
+}
+.solid-graphs .accordion-container > .accordion-level > label .acc-arrow,
+.solid-graphs .accordion-container > .accordion-level > label .acc-minus,
+.solid-graphs .accordion-container > .accordion-level > label .acc-plus {
+  line-height: 29px;
+  font-size: 0.9em;
+  -webkit-transition: all 0.1s ease-in;
+     -moz-transition: all 0.1s ease-in;
+       -o-transition: all 0.1s ease-in;
+          transition: all 0.1s ease-in;
+}
+.solid-graphs .accordion-container > .accordion-level > label .acc-plus {
+  display: block;
+}
+.solid-graphs .accordion-container > .accordion-level > label .acc-minus {
+  display: none;
+}
+.solid-graphs .accordion-container > .accordion-level .accordion-content {
+  background: #FFFFFF;
+  display: none;
+  max-height: 0;
+  border-left: 1px solid #c1c1c1;
+  border-right: 1px solid #c1c1c1;
+  overflow: auto;
+  -webkit-transition: all 0.4s ease-in-out;
+     -moz-transition: all 0.4s ease-in-out;
+       -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+}
+.solid-graphs .accordion-container > .accordion-level .accordion-content .content {
+  padding: 30px 25px;
+}
+.solid-graphs .accordion-container > .accordion-level .accordion-content .content.content-pad-small {
+  padding: 10px 36px !important;
+}
+.solid-graphs .accordion-container > .accordion-level .accordion-content .content.content-pad-small p {
+  margin: 5px 0;
+  color: #555;
+}
+.solid-graphs .accordion-container > .accordion-level:last-child > label,
+.solid-graphs .accordion-container > .accordion-level:last-child .accordion-content {
+  border-bottom: 1px solid #c1c1c1;
+}
+.solid-graphs .accordion-container ::-webkit-scrollbar {
+  width: 10px;
+}
+.solid-graphs .accordion-container ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px #b3b3b3;
+          box-shadow: inset 0 0 1px #b3b3b3;
+}
+.solid-graphs .accordion-container ::-webkit-scrollbar-thumb {
+  background: #b3b3b3;
+}

@@ -1,0 +1,40 @@
+{
+  "customer_group_proxy": {
+    "name": "customer_group_proxy",
+    "purpose": "RESOURCE",
+    "display_name": "Customer Group",
+    "cluster": "DB_PROFILE",
+    "ui": true,
+    "api": true,
+    "base_resource": "customer_group",
+    "api_from_db": true,
+    "ui_from_db": true,
+    "menu_context": "setup",
+    "blocks": {
+      "basic_configuration": {
+        "title": "Configuration"
+      }
+    },
+    "fields": {
+      "id": {
+        "length": "128",
+        "type": "String"
+      },
+      "name": {
+        "length": "128",
+        "type": "String",
+        "block": "basic_configuration",
+        "list": {
+          "heading": "Name",
+          "type": "STRING",
+          "order": 1
+        },
+        "form": {
+          "label": "Name",
+          "component": "textbox",
+          "order": 1
+        }
+      }
+    }
+  }
+}

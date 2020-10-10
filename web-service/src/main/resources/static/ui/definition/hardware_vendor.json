@@ -1,0 +1,56 @@
+{
+			"resource" : "hardware_vendor",
+			"display_name" : "hardware_vendor",
+			"list" : {
+				"fields":[
+					{
+						"heading":"Name",
+						"order":1,
+						"sortable":true,
+						"name":"name"
+					},
+					{
+						"heading":"Short Name",
+						"order":1,
+						"sortable":true,
+						"name":"short_code"
+					}
+				]
+			},
+			"form" : {
+					"blocks": [
+						{
+							"name":"basic_information",
+							"fields":[
+								{
+									"label":"Id",
+									"order":1,
+									"type":"String",
+									"required":"true",
+									"component":"HIDDEN",
+								"name":"id"
+								},
+								{
+									"label":"Name",
+									"order":1,
+									"type":"String",
+									"required":"true",
+									"hint":"Enter Name here",
+									"component":"TEXTINPUT",
+								"name":"name"
+								},
+								{
+									"label":"Short Name",
+									"order":1,
+									"type":"String",
+									"required":"true",
+									"hint":"Enter Short Name here",
+									"component":"TEXTINPUT",
+								"name":"short_code"
+								}
+							],
+							"title":"Basic Information"
+						}
+					]
+			}
+}

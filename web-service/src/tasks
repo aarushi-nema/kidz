@@ -1,0 +1,53 @@
+Smart Interface Integration
+
+-> create customer account
+-> create subscriber account
+-> check and create account
+
+
+Data Import
+-> Import from excel
+    -> Parsing Excel - Done
+    -> Creating data
+
+Bill format
+-> Bill Generation Date
+-> Previous Balance
+-> Late Payment Charges
+-> Charges after due date
+-> Calculate the Fix charges per day
+
+Report
+-> create data without consumption
+-> meter group wise report (daily/monthly)
+
+Master
+    Unit
+    Unit Group
+    Unit type
+
+
+Smart Plug Code
+
+TCS integration
+
+Visiter Management
+
+Compalin Register
+
+Done
+
+Bill Format
+-> Load - Done
+-> Fix Rate per KW - Done
+
+Smart Plug Code
+
+TCS integration
+
+Visiter Management
+
+Compalin Register
+
+c4t-gateway
+-> Enable code for intellij - Done

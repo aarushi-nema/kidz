@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        
+    </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/ui/js/function.js">
+        </script> 
+        <script type="text/javascript" src="/ui/js/DataHandler.js">
+        </script> 
+        <script type="text/javascript" src="/ui/js/json.js">
+        </script> 
+        <script type="text/javascript" src="/ui/js/base64.js">
+        </script> 
+  
+        <style>
+            .header {
+                background-color:black;
+                color:white;
+                width : 100%;
+                padding:5px;
+                padding-bottom : 10px
+            }
+
+            .header_left {
+                float : left;
+                padding-left : 10px;
+            }
+            .header_right {
+                float : right;
+                padding-right : 20px;
+            }
+
+            .options {
+                margin-top : 30px;
+                padding-left : 40px;
+                display: table-cell;
+    			vertical-align: top;
+            }
+
+            .right_side {
+                line-height:30px;
+                background-color:#eeeeee;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                width:300px;
+                float:right;
+                padding:5px;
+            }
+
+            .answer_sheet {
+                line-height:30px;
+                background-color:#eeeeee;
+                width:100%;
+                overflow: scroll;
+                max-height : 350px;
+                overflow-x:hidden;
+            }
+
+            .answer_sheet_info {
+                line-height:30px;
+                background-color:#eeeeee;
+                width:100%;
+                font-size:12px;
+                padding-bottom : 60px;
+                bottom: 55px;
+            }
+
+            .row {
+                margin-left: -20px;
+                *zoom: 1;
+                margin-top: 50px;
+            }
+
+            section {
+                width:100%;
+                float:left;
+                padding-left:20px;
+                padding-right:10px;
+            }
+
+
+            .not_attempted {
+                width: 32px;
+                height: 32px;
+                color : black;
+                cursor: pointer; cursor: hand;
+                background: silver;
+                border-radius: 50%;
+                border: 1px solid gray;
+            }
+
+            .review {
+                width: 32px;
+                height: 32px;
+                cursor: pointer; cursor: hand;
+                color : white;
+                background: purple;
+                border-radius: 50%;
+                border: 1px solid pink;
+            }
+
+            .attempted {
+                width: 32px;
+                height: 32px;
+                color : white;
+                cursor: pointer; cursor: hand;
+                background: green;
+                border-radius: 50%;
+                border: 1px solid pink;
+            }
+
+            .attempted_review {
+                width: 32px;
+                height: 32px;
+                cursor: pointer; cursor: hand;
+                color : black;
+                background: yellow;
+                border-radius: 50%;
+                border: 1px solid pink;
+            }
+            select {
+                color : black; 
+            }    
+            body {
+                height: 100%;
+                width : 100%;
+            }
+            footer {
+                width : 100%;
+                height : 70px;
+                background-color:black;
+                color:white;
+                clear:both;
+                padding:5px;
+                position: fixed;
+                bottom : 0px;
+            }
+            .question_no {
+                font-size : 18px;
+                font-weight : bold;
+                margin-bottom : 20px;
+                padding-left : 10px;
+                float : left;
+            }
+            .total_question {
+                font-size : 18px;
+                font-weight : bold;
+                margin-bottom : 20px;
+                float: right;
+            }
+
+            .question {
+                margin-top : 40px;
+                font-size : 15px;
+            }
+
+            .button {
+                background-color: white; /* Green */
+                border: none;
+                color: black;
+                margin : 5px;
+                padding: 8px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            .footer_right_side {
+                float : right;
+                padding-top: 7px;
+                padding-right : 20px;
+            }
+            .footer_left_side {
+                padding-top: 7px;
+                padding-left : 20px;
+                float : left;
+            }
+            .time_remaining {
+                float : right;
+            }
+            table {
+                margin-top : 0px;
+            }
+            .table_cell {
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body >
+        <script>
+        	function isEmpty(str) {
+        		if ((str == null) || (str.trim() == "") || 
+        		str.trim() == "\u003cbr\u003e" || 
+        		str.trim() == "<br\>") {
+        			return true;
+        		}
+        		return false;
+        	}
+            var questions = [];
+            var language = "english";    
+            var test = {};
+            test.id = "!!!test_id!!!";
+            var started = true;
+            var started_time;
+            var test_over = false;
+            var available_languages = [];
+            function process_test_over() {
+                test_over = true;
+                alert("Test Over.. Now you cannot change the answer. Please submit you result");
+            }
+            function calculate_remaining_time() {
+                current_time = new Date();
+                var time_diff = current_time - started_time;
+                var time_remaining = Math.floor((test.time_duration_inmin * 60 * 1000 - time_diff) / 1000);
+                var mins = Math.floor(time_remaining / 60);
+                var secs = time_remaining - mins * 60;
+                $("#time_remaining").text(mins + " Min " + secs + " Secs left");
+                if (time_remaining <= 0) {
+                    time_remaining = 0;
+                    $("#time_remaining").text("Test Over.. Please submit you result");
+                    process_test_over();
+                } else {
+                    setTimeout(calculate_remaining_time, 5000);
+                }
+
+
+
+            }
+
+            function start_test() {
+                started_time = new Date();
+                calculate_remaining_time();
+            }
+            function fetch_questions() {
+                $.ajax({url: "/c4t/test?queryId=QUERY_GET_TEST_QUESTIONS_FOR_PREVIEW&args=test_id:" + test.id,
+                    success: function (result) {
+                        questions = result.resource;
+                        populate_test();
+                    }
+                });
+            }
+
+            function fetch_test() {
+                $.ajax({url: "/c4t/test?queryId=QUERY_GET_TEST_FOR_PREVIEW&args=test_id:" + test.id,
+                    success: function (result) {
+                        test.name = result.resource[0].title;
+                        test.code = result.resource[0].code;
+                        test.multi_choice = result.resource[0].multi_choice;
+                        if (test.multi_choice == null) {
+                        	test.multi_choice = "N";
+                        }
+                        available_languages = [];
+                        if (result.resource[0].test_english == "Y") {
+                            available_languages.push("english");
+                        }
+                        if (result.resource[0].test_hindi == "Y") {
+                            available_languages.push("hindi");
+                        }
+                        $('#language').empty();
+                        if(available_languages.length > 0) {
+                            $.each(available_languages, function(i, p) {
+                                $('#language').append($('<option></option>').val(p).html(p));
+                            });
+                        } else {
+                            available_languages.push("english");
+                            $.each(available_languages, function(i, p) {
+                                $('#language').append($('<option></option>').val(p).html(p));
+                            });
+                        }
+                        fetch_questions()
+                    }
+                });
+            }
+
+            function save_result() {
+                if (test_over)
+                    return;
+                questions[current_question_index].option_answer_1 = "N";
+                questions[current_question_index].option_answer_2 = "N";
+                questions[current_question_index].option_answer_3 = "N";
+                questions[current_question_index].option_answer_4 = "N";
+                 questions[current_question_index].option_answer_5 = "N";
+                if ($("#option_1").prop('checked') == true) {
+                    questions[current_question_index].option_answer_1 = "Y";
+                }
+                if ($("#option_2").prop('checked') == true) {
+                    questions[current_question_index].option_answer_2 = "Y";
+                }
+                if ($("#option_3").prop('checked') == true) {
+                    questions[current_question_index].option_answer_3 = "Y";
+                }
+                if ($("#option_4").prop('checked') == true) {
+                    questions[current_question_index].option_answer_4 = "Y";
+                }
+                if ($("#option_5").prop('checked') == true) {
+                    questions[current_question_index].option_answer_5 = "Y";
+                }
+
+            }
+
+            function clear_result() {
+                questions[current_question_index].option_answer_1 = "N";
+                questions[current_question_index].option_answer_2 = "N";
+                questions[current_question_index].option_answer_3 = "N";
+                questions[current_question_index].option_answer_4 = "N";
+                questions[current_question_index].option_answer_5 = "N";
+                $("#option_1").prop('checked', false);
+                $("#option_2").prop('checked', false);
+                $("#option_3").prop('checked', false);
+                $("#option_4").prop('checked', false);
+                $("#option_5").prop('checked', false);
+                
+            }
+
+            function update_total_result() {
+                var attempted = 0;
+                var not_attempted = 0;
+                var review = 0;
+                var attempted_review = 0;
+                for (i = 0; i < questions.length; i++) {
+                    if (questions[i].status == "not_attempted") {
+                        not_attempted++;
+                    } else if (questions[i].status == "attempted") {
+                        attempted++;
+                    } else if (questions[i].status == "review") {
+                        review++;
+                    } else if (questions[i].status == "attempted_review") {
+                        attempted_review++;
+                    } else {
+                        not_attempted++;
+                    }
+                }
+                $("#total_not_attempted").text(not_attempted);
+                $("#total_attempted").text(attempted);
+                $("#total_review").text(review);
+                $("#total_attempted_review").text(attempted_review);
+            }
+            function display_question(question) {
+
+                $("#question_no").text(current_question_index + 1);
+                if (language == "english") {
+                    $("#description").html(question.description);
+                    $("#question").html(question.question);
+                    $("#label_option_1").html(question.option_1);
+                    $("#label_option_2").html(question.option_2);
+                    $("#label_option_3").html(question.option_3);
+                    $("#label_option_4").html(question.option_4);
+                    $("#label_option_5").html(question.option_5);
+                    
+                    if (isEmpty(question.option_1)) {
+                        $("#option_1").hide();
+                    }else {
+                        $("#option_1").show();
+                    }
+                     if(isEmpty(question.option_2)) {
+                        $("#option_2").hide();
+                    }else {
+                        $("#option_2").show();
+                    }
+                    if (isEmpty(question.option_3)) {
+                        $("#option_3").hide();
+                    }else {
+                        $("#option_3").show();
+                    }
+                    if (isEmpty(question.option_4)) {
+                        $("#option_4").hide();
+                    }else {
+                        $("#option_4").show();
+                    }
+                    if (isEmpty(question.option_5)) {
+                        $("#option_5").hide();
+                    }else {
+                        $("#option_5").show();
+                    }
+                    if (isEmpty(question.question)) {
+                    	$("#question_row").hide();
+                    } else {
+                    	$("#question_row").show();
+                    }
+                    if (isEmpty(question.description)) {
+                    	$("#paragraph_row").hide();
+                    } else {
+                    	$("#paragraph_row").show();
+                    }
+                } else if (language == "hindi") {
+                    $("#description").html(question.description_hindi);
+                    $("#question").html(question.question_hindi);
+                    $("#label_option_1").html(question.option_hindi_1);
+                    $("#label_option_2").html(question.option_hindi_2);
+                    $("#label_option_3").html(question.option_hindi_3);
+                    $("#label_option_4").html(question.option_hindi_4);
+                    $("#label_option_5").html(question.option_hindi_5);
+               
+                    if (isEmpty(question.option_hindi_1)) {
+                        $("#option_1").hide();
+                    } else {
+                        $("#option_1").show();
+                    }
+                    if (isEmpty(question.option_hindi_2)) {
+                        $("#option_2").hide();
+                    } else {
+                        $("#option_2").show();
+                    }
+                    if (isEmpty(question.option_hindi_3)) {
+                        $("#option_3").hide();
+                    } else {
+                        $("#option_3").show();
+                    }
+                    if (isEmpty(question.option_hindi_4)) {
+                        $("#option_4").hide();
+                    } else {
+                        $("#option_4").show();
+                    }
+                    if (isEmpty(question.option_hindi_5)) {
+                        $("#option_5").hide();
+                    } else {
+                        $("#option_5").show();
+                    }
+                    if (isEmpty(question.question_hindi)) {
+                    	$("#question_row").hide();
+                    } else {
+                    	$("#question_row").show();
+                    }
+                    if (isEmpty(question.description_hindi)) {
+                    	$("#paragraph_row").hide();
+                    } else {
+                    	$("#paragraph_row").show();
+                    }
+                }
+                $("#option_1").prop('checked', false);
+                $("#option_2").prop('checked', false);
+                $("#option_3").prop('checked', false);
+                $("#option_4").prop('checked', false);
+                $("#option_5").prop('checked', false);
+                
+                if (question.option_answer_1 == "Y") {
+                    $("#option_1").prop('checked', true)
+                }
+                if (question.option_answer_2 == "Y") {
+                    $("#option_2").prop('checked', true)
+                }
+                if (question.option_answer_3 == "Y") {
+                    $("#option_3").prop('checked', true)
+                }
+                if (question.option_answer_4 == "Y") {
+                    $("#option_4").prop('checked', true)
+                }
+                if (question.option_answer_5 == "Y") {
+                    $("#option_5").prop('checked', true)
+                }
+                update_total_result();
+            }
+
+
+            function isOptionSelected() {
+
+                if ($("#option_1").prop('checked') == true) {
+                    return true;
+                }
+                if ($("#option_2").prop('checked') == true) {
+                    return true;
+                }
+                if ($("#option_3").prop('checked') == true) {
+                    return true;
+                }
+                if ($("#option_4").prop('checked') == true) {
+                    return true;
+                }
+                if ($("#option_5").prop('checked') == true) {
+                    return true;
+                }
+                return false;
+            }
+
+            function update_language() {
+                language = $("#language").val();
+                display_question(questions[current_question_index]);
+            }
+            function populate_test() {
+                language = $("#language").val();
+                current_question_index = 0;
+                $("#test_name").text(test.name +" - " +test.code);
+                $("#previous_button").hide();
+                $("#total_questions").text(questions.length);
+
+                display_question(questions[current_question_index]);
+                var table_content = "";
+                var rows = Math.floor(questions.length / 6) + 1;
+                var index = 0;
+                for (i = 0; i < rows; i++) {
+                    table_content = table_content + "<tr>";
+                    for (col = 0; col < 6; col++) {
+                        if (index < questions.length) {
+                            table_content = table_content + "<td align=\"center\" class=\"table_cell\"><div class=\"not_attempted\" id=\"ans_" + (index + 1) + "\">" + (index + 1) + "</div></td>";
+                        } else {
+                            table_content = table_content + "<td class=\"table_cell\"></td>";
+                        }
+                        index++;
+                    }
+                    table_content = table_content + "</tr>";
+                }
+                table_content = table_content + "<tr>";
+                 $("#language").change(function () {
+                    update_language();
+                 });
+                $("#answer_sheet_table").append(table_content);
+                $("#previous_button").click(function () {
+                    //Do stuff when clicked
+                    if (isOptionSelected()) {
+                        var current_class = $("#ans_" + (current_question_index + 1)).attr('class');
+                        if (current_class == "not_attempted") {
+                            $("#ans_" + (current_question_index + 1)).addClass("attempted");
+                            questions[current_question_index].status = "attempted";
+                        } else if (current_class == "review") {
+                            $("#ans_" + (current_question_index + 1)).addClass("attempted_review");
+                            questions[current_question_index].status = "attempted_review";
+                        }
+                    } else {
+                        if (questions[current_question_index].status == "attempted_review") {
+                            questions[current_question_index].status = "review";
+                        } else {
+                            questions[current_question_index].status = "not_attempted";
+                        }
+                    }
+                    save_result();
+                    current_question_index--;
+                    display_question(questions[current_question_index]);
+                    $("#next_button").show();
+                    if (current_question_index == 0) {
+                        $("#previous_button").hide();
+                    }
+
+                });
+
+                $("#next_button").click(function () {
+                    if (isOptionSelected()) {
+                        var current_class = $("#ans_" + (current_question_index + 1)).attr('class');
+                        if (current_class == "not_attempted") {
+                            $("#ans_" + (current_question_index + 1)).addClass("attempted");
+                            questions[current_question_index].status = "attempted";
+                        } else if (current_class == "review") {
+                            $("#ans_" + (current_question_index + 1)).addClass("attempted_review");
+                            questions[current_question_index].status = "attempted_review";
+                        }
+                    } else {
+                        if (questions[current_question_index].status == "attempted_review") {
+                            questions[current_question_index].status = "review";
+                        } else {
+                            questions[current_question_index].status = "not_attempted";
+                        }
+                    }
+                    //Do stuff when clicked
+                    save_result();
+                    current_question_index++;
+                    display_question(questions[current_question_index]);
+                    $("#previous_button").show();
+                    if (current_question_index == (questions.length - 1)) {
+                        $("#next_button").hide();
+                    }
+                });
+
+                $("#review_button").click(function () {
+                    //Do stuff when clicked
+                    questions[current_question_index].status = "review";
+
+                    var current_class = $("#ans_" + (current_question_index + 1)).attr('class');
+                    $("#ans_" + (current_question_index + 1)).removeClass(current_class);
+                    if (isOptionSelected()) {
+                        $("#ans_" + (current_question_index + 1)).addClass("attempted_review");
+                        questions[current_question_index].status = "attempted_review";
+                    } else {
+                        $("#ans_" + (current_question_index + 1)).addClass("review");
+                        questions[current_question_index].status = "review";
+                    }
+                    save_result();
+                    current_question_index++;
+                    display_question(questions[current_question_index]);
+                    $("#previous_button").show();
+                    if (current_question_index == (questions.length - 1)) {
+                        $("#next_button").hide();
+                    }
+                });
+
+                $("#submit_test_button").click(function () {
+                    //Do stuff when clicked
+                  	alert("This will submit the result");
+                    return false;
+      
+                });
+                $("#question_paper_button").click(function () {
+                    alert("Not implemented");
+                });
+                
+                $("#instruction_button").click(function () {
+                    alert("Not implemented");
+                });
+                
+                $("#clear_answer_button").click(function () {
+                    //Do stuff when clicked
+                    clear_result();
+                });
+                for (i = 0; i < questions.length; i++) {
+                    $("#ans_" + (i + 1)).click(function () {
+                        if (isOptionSelected()) {
+                            var current_class = $("#ans_" + (current_question_index + 1)).attr('class');
+                            if (current_class == "not_attempted") {
+                                $("#ans_" + (current_question_index + 1)).addClass("attempted");
+                            }
+                        }
+                        //Do stuff when clicked
+                        save_result();
+                        current_question_index = parseInt(this.id.replace("ans_", "")) - 1;
+                        display_question(questions[current_question_index]);
+                        $("#previous_button").show();
+                        $("#next_button").show();
+                        if (current_question_index == (questions.length - 1)) {
+                            $("#next_button").hide();
+                        }
+                        if (current_question_index == 0) {
+                            $("#previous_button").hide();
+                        }
+
+                    });
+                }
+            }
+            window.onload = maxWindow;
+
+            function maxWindow()
+            {
+                window.moveTo(0,0);
+                if (document.all)
+                {
+                    top.window.resizeTo(screen.availWidth,screen.availHeight);
+                }
+                else if (document.layers||document.getElementById)
+                {
+                    if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth)
+                    {
+                        top.window.outerHeight = screen.availHeight;
+                        top.window.outerWidth = screen.availWidth;
+                    }
+                }
+            }
+            $(document).ready(function () {
+                test.name = "-";
+                test.time_duration_inmin = 60;
+                maxWindow();
+                start_test();
+                //$(document).find("input:checked[type='radio']").addClass('bounce');
+                questions = [];
+                fetch_test();
+                $('#option_1').click(function() {
+                	if (test.multi_choice == "N") {
+				        if ($(this).is(':checked')) {
+				        	$("#option_2").prop('checked', false);
+				        	$("#option_3").prop('checked', false);
+				        	$("#option_4").prop('checked', false);
+				        	$("#option_5").prop('checked', false);
+				        }
+			        }
+			    });
+			    $('#option_2').click(function() {
+			       if (test.multi_choice == "N") {
+				        if ($(this).is(':checked')) {
+				        	$("#option_1").prop('checked', false);
+				        	$("#option_3").prop('checked', false);
+				        	$("#option_4").prop('checked', false);
+				        	$("#option_5").prop('checked', false);
+				        }
+			        }
+			    });
+			    $('#option_3').click(function() {
+			       if (test.multi_choice == "N") {
+				        if ($(this).is(':checked')) {
+				        	$("#option_1").prop('checked', false);
+				        	$("#option_2").prop('checked', false);
+				        	$("#option_4").prop('checked', false);
+				        	$("#option_5").prop('checked', false);
+				        }
+			        }
+			    });
+			    $('#option_4').click(function() {
+			        if (test.multi_choice == "N") {
+				        if ($(this).is(':checked')) {
+				        	$("#option_1").prop('checked', false);
+				        	$("#option_2").prop('checked', false);
+				        	$("#option_3").prop('checked', false);
+				        	$("#option_5").prop('checked', false);
+				        }
+			        }
+			    });
+			    $('#option_5').click(function() {
+			        if (test.multi_choice == "N") {
+				        if ($(this).is(':checked')) {
+				        	$("#option_1").prop('checked', false);
+				        	$("#option_2").prop('checked', false);
+				        	$("#option_3").prop('checked', false);
+				        	$("#option_4").prop('checked', false);
+				        }
+			        }
+			    });
+            });
+        </script>
+        <div class="header">
+            <div class="header_left">
+                <h3 id="test_name"> </h3>
+            </div>
+            <div class="header_right">
+                <h3 id="time_remaining"> </h3>
+            </div>
+            <div style="clear:both"></div>
+            <table width="100%">
+                <tr>
+                    <td style="padding-left: 10px;">					
+                        <span> Question # </span> <span id="question_no"> </span>
+                    </td>	
+                    <td align="right" style="padding-right:20px">
+                        Language : <select id="language">
+                            <option>english</option>
+                            <option>hindi</option>
+                        </select> &nbsp&nbsp; <span> Total Questions # </span> <span id="total_questions"> </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <table width="100%">
+            <tr style="vertical-align:top;">
+                <td>
+                    <section>
+                        <table width="100%">
+                             <tr id="paragraph_row">
+                                <td style="vertical-align:top;">
+                                    <div id="description" class="question">
+                                        Paragraph will come here
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="question_row">
+                                <td style="vertical-align:top;">
+                                    <div id="question" class="question">
+                                        question will come here
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <div class="options">
+                            <input style="vertical-align: top" type="checkbox" id="option_1" name="option_1"/> <label for="option_1"><span id="label_option_1">option 1 dlgdfgdfh <br> \n slkfhslk</span></label><br>
+                            <input style="vertical-align: top" type="checkbox" id="option_2" name="option_2"/> <label for="option_2"><span id="label_option_2">option 2</span></label><br>
+                            <input style="vertical-align: top" type="checkbox" id="option_3" name="option_3"/> <label for="option_3"><span id="label_option_3">option 3</span></label><br>
+                            <input style="vertical-align: top" type="checkbox" id="option_4" name="option_4"/> <label for="option_4"><span id="label_option_4">option 4</span></label><br>
+                            <input style="vertical-align: top" type="checkbox" id="option_5" name="option_5"/> <label for="option_5"><span id="label_option_5">option 5</span></label><br>                 
+                        </div>
+                    </section>
+
+                </td>
+                <td width="350px">
+                    <div class="right_side">
+                        <div class="answer_sheet">
+                            <table id="answer_sheet_table" width="100%">
+                            </table>
+                        </div>
+                        <hr style="border-bottom-width : 2px; border-bottom-color:black"/>
+                        <div class="answer_sheet_info">
+                            <table width="100%">
+                                <tr>
+                                    <td align="center">
+                                        <div id="total_not_attempted" class="not_attempted">	
+
+                                        </div>
+                                    </td>
+                                    <td align="center">
+                                        <div id="total_attempted" class="attempted">	
+
+                                        </div>
+                                    </td>
+                                    <td align="center">
+                                        <div id="total_review" class="review">	
+
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center" width="100" >
+                                        Not Attempted
+                                    </td>
+                                    <td align="center" width="100">
+                                        Attempted
+                                    </td>
+                                    <td align="center" width="100">
+                                        Review
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" width="100">
+                                        <div id="total_attempted_review"  class="attempted_review">	
+
+                                        </div>
+                                    </td>
+                                    <td align="center">
+
+                                    </td>
+                                    <td align="center">
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="center">
+                                        Attempted & Review
+                                    </td>
+                                    <td align="center">
+
+                                    </td>
+                                    <td align="center">
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <footer>
+
+            <div class="footer_left_side">
+                <button id="previous_button" class="button">Previous</button>
+                <button id="next_button" class="button">Next</button>
+                <button id="clear_answer_button" class="button">Clear Response</button>
+                <button id="review_button" class="button">Review and Continue</button>
+            </div>
+
+            <div class="footer_right_side">
+                <button id="question_paper_button"  class="button">Question Paper</button>
+                <button id="instruction_button"  class="button">Instructions</button>
+                <button id="submit_test_button"  class="button">Submit Test</button>
+            </div>
+
+        </footer>
+
+    </body>
+</html>

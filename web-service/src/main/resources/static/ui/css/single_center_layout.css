@@ -1,0 +1,70 @@
+body {
+background-color:#383c45;
+}
+
+.wrapper {
+margin-left:auto;
+margin-right:auto;
+margin-top: 120px;
+border: 0px solid #fff;
+width: 400px;
+height: 346px;
+}
+
+
+.logo {
+float:left;
+width:392px;
+height:346px;
+
+}
+
+.form {
+width:400px;
+height:346px;
+background-color:#0092a8;
+border-bottom-right-radius:10px;
+border-top-right-radius:10px;
+
+}
+
+form {
+padding-top:58px;
+padding-left:42px;
+
+}
+
+form > label {
+
+color:#232a31;
+padding-left:15px;
+font-size: 14px;
+font-family: Arial;
+
+
+}
+
+
+input    {
+width:224px;
+display:block;
+padding-left : 5px;
+border: 1px solid #999;
+height: 33px;
+border-radius:10px;
+margin-top:10px;
+font-weight: normal;
+
+
+}
+
+.signinButton {
+width:150px;
+margin-left:75px;
+position:absolute;
+background:#143142;
+color:#0092a8;
+border: 0px;
+font-weight:bold;
+font-size:12px;
+}

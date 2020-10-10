@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloud 4 Things</title>
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/chart/font-awesome-4.3.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/chart/media-graph.css" type="text/css" id="responsiveness">
+
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/nicescroll.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/drilldown.js"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+    <!--<script type="text/javascript" src="assets/js/pages/dashboard.js"></script>-->
+    <script type="text/javascript" src="assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script type="text/javascript" src="assets/js/pages/datatables_advanced.js"></script>
+
+    <!-- jquery codes -->
+
+    <script type="text/javascript" src="/ui/js//action_handle.js">
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js">
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js">
+    </script>
+    <script type="text/javascript" src="/ui/js/function.js">
+    </script>
+    <script type="text/javascript" src="/ui/js/jExpand.js">
+    </script>
+    <script type="text/javascript" src="/ui/js/DataHandler.js">
+    </script>
+    <script type="text/javascript" src="/ui/js/json.js">
+    </script>
+    <script type="text/javascript" src="/ui/js/base64.js">
+    </script>
+    </script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js">
+    </script>
+    <script type="text/javascript" src="/ui/js/jquery.blockUI.js">
+    </script>
+</head>
+
+<body>
+    <!-- Main navbar -->
+    <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Text link</a></li>
+
+                <li>
+                    <a href="#">
+                    <i class="icon-calendar3"></i>
+                    <span class="visible-xs-inline-block position-right">Icon link</span>
+                </a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Text link</a></li>
+
+                <li>
+                    <a href="#">
+                    <i class="icon-cog3"></i>
+                    <span class="visible-xs-inline-block position-right">Icon link</span>
+                </a>
+                </li>
+
+                <li class="dropdown dropdown-user">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="assets/images/image.png" alt="">
+                    <span>Victoria</span>
+                    <i class="caret"></i>
+                </a>
+
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                        <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+                        <li><a href="#"><span class="badge badge-warning pull-right">58</span> <i
+                            class="icon-comment-discussion"></i> Messages</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                        <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /main navbar -->
+
+    <!-- Page container -->
+    <div class="page-container">
+
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main content -->
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- side panel -->
+                                <div class="panel panel-info">
+                                    <div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Welcome User Name</td>
+                                                    </tr>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- /side panel -->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">Setup</h5>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="col-md-12">
+                                            <a class="list-group-item with_indentation with_icon " href="location_group.html"><i
+                                                class="fa fa-users margin-r-5 with_indentation with_icon"></i>Site Group</a>
+                                            <a class="list-group-item with_indentation with_icon " href="location.html"><i
+                                                class="fa fa-map-marker margin-r-5 with_indentation with_icon"></i>Site</a>
+                                            <a class="list-group-item with_indentation with_icon " href="controller.html"><i
+                                                class="fa fa-recycle margin-r-5 with_indentation with_icon"></i>Controller</a>
+                                            <a class="list-group-item with_indentation with_icon " href="group.html"><i
+                                                class="fa fa-cogs margin-r-5 with_indentation with_icon"></i>Meter Group</a>
+                                            <a class="list-group-item with_indentation with_icon " href="meter.html"><i
+                                                class="fa fa-qrcode margin-r-5 with_indentation with_icon"></i>Meter</a>
+                                            <a class="list-group-item with_indentation with_icon " href="meter_mf_profile.html"><i
+                                                class="fa fa-snowflake-o margin-r-5 with_indentation with_icon"></i>Meter
+                                            MF Profile</a>
+                                            <a class="list-group-item with_indentation with_icon " href="meter_threshold.html"><i
+                                                class="fa fa-id-card margin-r-5 with_indentation with_icon"></i>Meter
+                                            Monitoring Profile</a>
+                                            <a class="list-group-item with_indentation with_icon " href="meter_policy.html"><i
+                                                class="fa fa-language margin-r-5 with_indentation with_icon"></i>Meter
+                                            Monitoring Policy</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- /side panel -->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">Billing</h5>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="col-md-12">
+                                            <a class="list-group-item with_indentation with_icon " href="billing_slab_master.html"><i
+                                                class="fa fa-file margin-r-5 with_indentation with_icon"></i>Slab Master</a>
+                                            <a class="list-group-item with_indentation with_icon " href="billing_plan.html"><i
+                                                class="fa fa-pie-chart margin-r-5 with_indentation with_icon"></i>Billing
+                                            Plan</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /col -->
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+
+                    </div>
+                    <!-- /grid -->
+
+                </div>
+                <!-- /main content -->
+            </div>
+            <!-- /page content -->
+        </div>
+    </div>
+    <!-- /page container -->
+    <!-- Footer -->
+    <div class="footer text-muted">
+        &copy; 2017. <a href="#">Cloud 4 Things</a>
+    </div>
+    <!-- /footer -->
+</body>
+
+</html>
