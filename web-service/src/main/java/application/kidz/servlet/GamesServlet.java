@@ -60,6 +60,17 @@ public class GamesServlet extends AmrSingleColumnDBApplicationServlet {
 		td.addChild(h2);
 		tr.addChild(td);
 
+		td = new TD();
+		td.addStyle("text-align","center");
+		h2 = new H2("");
+		a = new A();
+		a.setHref("/sight_word_recognize");
+		a.setText("Sight Word Recognize");
+
+		h2.addChild(a);
+		td.addChild(h2);
+		tr.addChild(td);
+
 		table.addChild(tr);
 		div.addChild(table);
 		return div;
