@@ -9,6 +9,9 @@ public static Set<ResourcePermission> resourcePermissions = new HashSet<Resource
 resourcePermissions.add(new ResourcePermission("sight_word", "sight_word", "", new String[]{"create","modify","get","delete"}));
 resourcePermissions.add(new ResourcePermission("sight_word_category_type", "sight_word_category_type", "", new String[]{"create","modify","get","delete"}));
 resourcePermissions.add(new ResourcePermission("word_family", "word_family", "", new String[]{"create","modify","get","delete"}));
+resourcePermissions.add(new ResourcePermission("sentence", "sentence", "", new String[]{"create","modify","get","delete"}));
 resourcePermissions.add(new ResourcePermission("sight_word_category", "sight_word_category", "", new String[]{"create","modify","get","delete"}));
+resourcePermissions.add(new ResourcePermission("sentence_category", "sentence_category", "", new String[]{"create","modify","get","delete"}));
+resourcePermissions.add(new ResourcePermission("sentence_type", "sentence_type", "", new String[]{"create","modify","get","delete"}));
 		}
 }
