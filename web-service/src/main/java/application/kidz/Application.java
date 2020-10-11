@@ -41,6 +41,36 @@ public class Application  {
     public static void loadData() {
         loadWordFamily();
         loadsightword();
+        load_sentence();
+    }
+    public static void load_sentence() {
+        Sentence word = new Sentence("big_cat");
+        word.setName("Big Cat");
+        SentenceHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new Sentence("big_bat");
+        word.setName("Big Bat");
+        SentenceHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new Sentence("bug_hid");
+        word.setName("bug hid");
+        SentenceHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new Sentence("get_box");
+        word.setName("Get Box");
+        SentenceHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new Sentence("the_map");
+        word.setName("The Map");
+        SentenceHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new Sentence("fun_mud");
+        word.setName("Fun Mud");
+        SentenceHelper.getInstance().AddOrUpdateNoCache(word);
+
+        word = new Sentence("big_bus");
+        word.setName("Big Bus");
+        SentenceHelper.getInstance().AddOrUpdateNoCache(word);
     }
     public static void loadsightword() {
 
