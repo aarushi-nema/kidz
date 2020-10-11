@@ -1,16 +1,11 @@
 package application.kidz.servlet;
 
 import application.kidz.servlet.base.AmrSingleColumnDBApplicationServlet;
-import application.kidz.servlet.base.AmrTwoColumnDBApplicationServlet;
-import application.kidz.servlet.base.menu.AmrImageCardView;
-import application.kidz.servlet.menu.SuperAdminSetupLeftMenuView;
-import com.lowagie.text.Table;
-import platform.resource.user;
 import platform.webservice.ui.UIServletContext;
 import platform.webservice.ui.html.*;
 
 
-public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
+public class GamesServlet extends AmrSingleColumnDBApplicationServlet {
 	/**
 	 * 
 	 */
@@ -38,16 +33,18 @@ public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
 	public BaseHTMLComponent getListView(UIServletContext context) {
 		// TODO Auto-generated method stub
 		Div div = new Div();
+		H2 h2;
+		A a;
 		div.addAttribute("align","center");
 		TABLE table = new TABLE("","default_table");
 		TR tr = new TR();
 
 		TD td = new TD();
 		td.addStyle("text-align","center");
-		H2 h2 = new H2("");
-		A a = new A();
-		a.setHref("/word_family");
-		a.setText("Word Families");
+		h2 = new H2("");
+		a = new A();
+		a.setHref("/word_family_word_recognize");
+		a.setText("Word Recognize");
 		h2.addChild(a);
 		td.addChild(h2);
 		tr.addChild(td);
@@ -56,18 +53,9 @@ public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
 		td.addStyle("text-align","center");
 		h2 = new H2("");
 		a = new A();
-		a.setHref("/sight_word_category_type");
-		a.setText("Sight Words");
-		h2.addChild(a);
-		td.addChild(h2);
-		tr.addChild(td);
+		a.setHref("/word_family_missing_character");
+		a.setText("Family Missing Character");
 
-		td = new TD();
-		td.addStyle("text-align","center");
-		h2 = new H2("");
-		a = new A();
-		a.setHref("/games");
-		a.setText("Games");
 		h2.addChild(a);
 		td.addChild(h2);
 		tr.addChild(td);

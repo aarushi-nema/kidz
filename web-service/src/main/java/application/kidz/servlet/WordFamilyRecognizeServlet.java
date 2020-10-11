@@ -1,8 +1,6 @@
 package application.kidz.servlet;
 
-import application.kidz.defined.helper.WordFamilyHelper;
 import application.kidz.defined.helper.WordFamilyWordHelper;
-import application.kidz.defined.resource.WordFamily;
 import application.kidz.defined.resource.WordFamilyWord;
 import application.kidz.servlet.base.AmrSingleColumnDBApplicationServlet;
 import platform.resource.BaseResource;
@@ -12,7 +10,7 @@ import platform.webservice.ui.html.*;
 import java.util.Date;
 
 
-public class WordFamilyPractice1Servlet extends AmrSingleColumnDBApplicationServlet {
+public class WordFamilyRecognizeServlet extends AmrSingleColumnDBApplicationServlet {
 	/**
 	 * 
 	 */
@@ -42,10 +40,6 @@ public class WordFamilyPractice1Servlet extends AmrSingleColumnDBApplicationServ
 		BaseResource[] resources = WordFamilyWordHelper.getInstance().getAll();
 		int index = (int)new Date().getTime()%resources.length;
 		WordFamilyWord word = (WordFamilyWord) resources[index];
-		String name = "";
-		if (word.getName().length() == 3) {
-			name = word.getName().charAt(0)+"    "+"_"+"   "+word.getName().charAt(2);
-		}
 		Div wordDiv = new Div();
 		div.addChild(new BR());
 		div.addChild(new BR());
@@ -53,14 +47,14 @@ public class WordFamilyPractice1Servlet extends AmrSingleColumnDBApplicationServ
 		div.addChild(new BR());
 		wordDiv.addAttribute("align", "center");
 		wordDiv.addAttribute("style","font-size: 200px;");
-		wordDiv.addChild(new TEXT(name));
+		wordDiv.addChild(new TEXT(word.getName()));
 		div.addChild(wordDiv);
 		div.addChild(new BR());
 		div.addChild(new BR());
 
 		A a = new A();
 		a.addStyle("font-size","24px");
-		a.setHref("/word_family_practice1");
+		a.setHref("/word_family_word_recognize");
 		a.setText("New Word");
 		div.addChild(a);
 

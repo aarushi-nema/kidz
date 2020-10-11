@@ -39,34 +39,49 @@ public class AmrHeaderView extends BaseView {
             menu_a.addAttribute("onClick","show_menu()");
             menu_a.addAttribute("style", "padding-top:10px;margin-bottom:10px");
             menu_a.setText("<i style=\"color:gray;font-size:40px\" class=\" fa fa-bars fa-rotate-90\"></i>");
-            navbar_header.addChild(menu_a);
+            //navbar_header.addChild(menu_a);
         } else {
             menu_a.setHref("#");
             menu_a.addAttribute("onClick","hide_menu()");
             menu_a.addAttribute("style", "padding-top:10px;margin-bottom:10px");
             menu_a.setText("<i style=\"color:gray;font-size:40px\" class=\" fa fa-bars\"></i>");
-            navbar_header.addChild(menu_a);
+           // navbar_header.addChild(menu_a);
         }
         A a = new A();
         a.setHref("/");
         a.setText("KIDZ");
         a.addAttribute("class", "navbar-brand");
-        a.addAttribute("style", "padding-top:2px");
+        a.addAttribute("style", "padding-top:10px;font-size:30px");
         navbar_header.addChild(a);
         Div navbarDiv = new Div("navbar", null);
         container.addChild(navbarDiv);
         UL ul = new UL(null, "nav navbar-nav navbar-right text-right");
         navbarDiv.addChild(ul);
-        LI li ;
+        LI li = new LI();
+        a = new A();
+        a.setText("Word Family");
+        a.setHref("/word_family");
+        li.addChild(a);
+        ul.addChild(li);
+
+        li = new LI();
+        a = new A();
+        a.setHref("/sight_word_category_type");
+        a.setText("Sight Words");
+        li.addChild(a);
+        ul.addChild(li);
+
+        li = new LI();
+        a = new A();
+        a.setHref("/games");
+        a.setText("Games");
+        li.addChild(a);
+        ul.addChild(li);
+
+
+       /* LI li ;
         li = new LI(null, "ropdown dropdown-user");
 
-
-                        /*<ul class="dropdown-menu dropdown-menu-right">
-                            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-                            <li><a href="/ui/logout"><i class="icon-switch2"></i> Logout</a></li>
-                        </ul>*/
         a = new A("", "dropdown-toggle");
         a.addAttribute("data-toggle", "dropdown");
         SPAN span = new SPAN();
@@ -113,5 +128,6 @@ public class AmrHeaderView extends BaseView {
 
         li.addChild(ul_drop);
         ul.addChild(li);
+        */
     }
 }

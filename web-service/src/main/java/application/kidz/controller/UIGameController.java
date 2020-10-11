@@ -4,7 +4,8 @@ package application.kidz.controller;
  * Created by ajay on 24/2/17.
  */
 
-import application.kidz.servlet.WordFamilyPractice1Servlet;
+import application.kidz.servlet.GamesServlet;
+import application.kidz.servlet.HomeServlet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -15,11 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 
 
 @Controller
-public class UIWordFamilyPractice1Controller {
+public class UIGameController {
     @Autowired
     private HttpServletRequest request;
 
-    @RequestMapping(value ="/word_family_practice1",method = RequestMethod.GET)
+    @RequestMapping(value ="/games",method = RequestMethod.GET)
     public @ResponseBody String doGet(@CookieValue(value="session_id",required=false) String sessionId,
                                       @RequestParam(value="session_id", required=false) String session_id,
                                       @RequestParam(value="id", required=false) String id,
@@ -37,7 +38,7 @@ public class UIWordFamilyPractice1Controller {
             }
 
             context.setDomainName(request.getServerName());
-            WordFamilyPractice1Servlet servlet = new WordFamilyPractice1Servlet();
+            GamesServlet servlet = new GamesServlet();
             String buffer = servlet.doGetSpringBoot(context);
             return buffer;
         } catch (Exception e) {
