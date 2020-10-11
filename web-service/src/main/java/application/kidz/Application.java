@@ -71,6 +71,30 @@ public class Application  {
         word = new Sentence("big_bus");
         word.setName("Big Bus");
         SentenceHelper.getInstance().AddOrUpdateNoCache(word);
+
+        SentenceType type = new SentenceType("various_category");
+        type.setName("Various Category");
+        SentenceTypeHelper.getInstance().AddOrUpdateNoCache(type);
+
+        SentenceCategory category = new SentenceCategory("various_category_2_word");
+        category.setName("2 Words");
+        category.setType("various_category");
+        SentenceCategoryHelper.getInstance().AddOrUpdateNoCache(category);
+
+        type = new SentenceType("day_wise");
+        type.setName("Day Wise");
+        SentenceTypeHelper.getInstance().AddOrUpdateNoCache(type);
+
+        category = new SentenceCategory("day_wise_day_1");
+        category.setName("Day 1");
+        category.setType("day_wise");
+        SentenceCategoryHelper.getInstance().AddOrUpdateNoCache(category);
+
+        category = new SentenceCategory("day_wise_day_2");
+        category.setName("Day 2");
+        category.setType("day_wise");
+        SentenceCategoryHelper.getInstance().AddOrUpdateNoCache(category);
+
     }
     public static void loadsightword() {
 
