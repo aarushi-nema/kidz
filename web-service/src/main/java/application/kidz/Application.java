@@ -44,6 +44,7 @@ public class Application  {
         load_sentence();
     }
     public static void load_sentence() {
+        List<String> list;
         Sentence word = new Sentence("big_cat");
         word.setName("Big Cat");
         SentenceHelper.getInstance().AddOrUpdateNoCache(word);
@@ -79,6 +80,12 @@ public class Application  {
         SentenceCategory category = new SentenceCategory("various_category_2_word");
         category.setName("2 Words");
         category.setType("various_category");
+        list = new ArrayList<>();
+        list.add("big_bus");
+        list.add("fun_mud");
+        list.add("the_map");
+        list.add("get_box");
+        category.setSentences(list);
         SentenceCategoryHelper.getInstance().AddOrUpdateNoCache(category);
 
         type = new SentenceType("day_wise");
