@@ -62,6 +62,10 @@ public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
 		td.addChild(h2);
 		tr.addChild(td);
 
+		table.addChild(tr);
+
+		tr = new TR();
+
 		td = new TD();
 		td.addStyle("text-align","center");
 		h2 = new H2("");
@@ -71,9 +75,7 @@ public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
 		h2.addChild(a);
 		td.addChild(h2);
 		tr.addChild(td);
-		table.addChild(tr);
 
-		tr = new TR();
 		td = new TD();
 		td.addStyle("text-align","center");
 		h2 = new H2("");
