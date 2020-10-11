@@ -73,6 +73,13 @@ public class AmrHeaderView extends BaseView {
 
         li = new LI();
         a = new A();
+        a.setHref("/sentence_type");
+        a.setText("Sentence");
+        li.addChild(a);
+        ul.addChild(li);
+
+        li = new LI();
+        a = new A();
         a.setHref("/games");
         a.setText("Games");
         li.addChild(a);

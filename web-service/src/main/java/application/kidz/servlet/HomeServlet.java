@@ -66,12 +66,23 @@ public class HomeServlet extends AmrSingleColumnDBApplicationServlet {
 		td.addStyle("text-align","center");
 		h2 = new H2("");
 		a = new A();
+		a.setHref("/sentence_type");
+		a.setText("Sentences");
+		h2.addChild(a);
+		td.addChild(h2);
+		tr.addChild(td);
+		table.addChild(tr);
+
+		tr = new TR();
+		td = new TD();
+		td.addStyle("text-align","center");
+		h2 = new H2("");
+		a = new A();
 		a.setHref("/games");
 		a.setText("Games");
 		h2.addChild(a);
 		td.addChild(h2);
 		tr.addChild(td);
-
 		table.addChild(tr);
 		div.addChild(table);
 		return div;
